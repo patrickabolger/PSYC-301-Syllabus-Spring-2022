@@ -1,0 +1,1219 @@
+---
+title: |
+  ![](images/TAM-PrimaryMarkA.png){width=75%}  
+  Syllabus for PSYC 301:
+subtitle: |
+ Elementary Statistics for Psychology (Spring, 2022)
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+  encoding=encoding,
+  output_file=file.path(dirname(input_file), out_dir, 'index.html'))
+    }
+  )
+output: 
+  rmdformats::downcute:
+    use_bookdown: true
+---
+
+<!-- Setup -->  
+
+```{r setup, include=F}
+knitr::opts_chunk$set(
+	echo = F, message = F, warning = F, comment = NA
+)
+```
+
+  
+```{r LoadPackages, include=F}
+#if(!require(pacman)){install.packages("pacman");require(pacman)} # un-comment and run this if the 'pacman' package is not installed. It's required for the function below.
+pacman::p_load(dplyr, knitr, magrittr, kableExtra, readr, tibble, tidyr, pander)
+```
+
+<!-- Course Points -->
+
+```{r CoursePoints}
+
+############## Main Class #################3
+
+## Exams 
+A <- 75 # Points per exam
+B <- 4 # Number of Exams
+
+## Homework
+U <- 5 # Points per easier HW
+V <- 4 # Number of easier HWs
+W <- 8 #Points per harder HW
+X <- 7 # Number of harder HWs
+Y <- 12 # Points per hardest HW
+Z <- 2 # Number per hardest HW
+
+############## Lab ##################
+
+## Attendance
+C <-  5 # Points per attendance
+D <- 13 # Number of lab meetings
+
+## Support tasks
+E <- 2 # Points per support task
+G <- 8 # Number of support Tasks
+
+## Rough Drafts
+H <- 25 # Points per Rough Drafts (Peerceptiv)
+I <-  4 # Number of Rough Drafts
+
+## Final Dfts
+J <- 44 # Points for Final Draft 1 (Turnitin)
+K <- 55 # Points for Final Draft 2 (Turnitin)
+L <- 45 # Points for Final Draft 3 (Turnitin)
+M <- 75 # Points for Final Draft 4 (Turnitin)
+
+## POINT TOTALS
+N <- sum((A*B),(C*D),(E*G),(H*I),J,K,L,M,(U*V),(W*X),(Y*Z)) # For the entire class
+O <- sum(      (C*D),(E*G),(H*I),J,K,L,M) # For the lab only
+P <- sum(            (E*G),(H*I),J,K,L,M) # For the research project Only
+Q <- sum(                  (H*I),J,K,L,M) # For all the drafts (rough & final) only
+R <- sum(                        J,K,L,M) # For the final drafts only
+
+```
+
+```{r SyllabusText}
+# Exam Dates
+## Exam 1
+## 
+## THESE NEEED TO CHANGE, I THINK
+## 
+Date_Exam1_Start <- "Thursday, 16 September"
+Time_Exam1_Start <- "2 pm"
+Date_Exam1_Finish <- "Tuesday, 21 September"
+Time_Exam1_Finish <- "9:35 am"
+
+## Exam 2
+Date_Exam2_Start <- "Thursday, 7 October"
+Time_Exam2_Start <- "2 pm"
+Date_Exam2_Finish <- "Tuesday, 12 October"
+Time_Exam2_Finish <- "9:35 am"
+
+## Exam 3
+Date_Exam3_Start <- "Thursday, 11 November"
+Time_Exam3_Start <- "2 pm"
+Date_Exam3_Finish <- "Tuesday, 16 November"
+Time_Exam3_Finish <- "9:35 am"
+
+## Final Exam
+Date_Final_Start <- "Monday, 10 December"
+Time_Final_Start <- "8:00 am"
+Date_Final_Finish <- "Wednesday, 15 December"
+Time_Final_Finish <- "4:30 pm"
+
+# Homework problems
+Name_HW01 <- "Central Tendency"
+Date_HW01_Start <- "Monday, 9 September"
+Time_HW01_Start <- "12 am"
+
+Name_HW02 <- "Variation"
+Date_HW02_Start <- "Monday, 13 September"
+Time_HW02_Start <- "12 am"
+
+Name_HW03 <- "z-scores"
+Date_HW03_Start <- "Monday, 13 September"
+Time_HW03_Start <- "12 am"
+
+Name_HW04 <- "Boxplots"
+Date_HW04_Start <- "Monday, 20 September"
+Time_HW04_Start <- "12 am"
+
+Name_HW05 <- "Standard Error and Confidence Intervals"
+Date_HW05_Start <- "Monday, 27 September"
+Time_HW05_Start <- "12 am"
+
+Name_HW06 <- "Area Under Curve"
+Date_HW06_Start <- "Monday, 27 September"
+Time_HW06_Start <- "12 am"
+
+Name_HW07 <- "Chi-square"
+Date_HW07_Start <- "Monday, 11 October"
+Time_HW07_Start <- "12 am"
+
+Name_HW08 <- "Independent-samples t-test"
+Date_HW08_Start <- "Monday, 18 October"
+Time_HW08_Start <- "12 am"
+
+Name_HW09 <- "ANOVA table"
+Date_HW09_Start <- "Monday, 25 October"
+Time_HW09_Start <- "12 am"
+
+Name_HW10 <- "ANOVA Sums of Squares"
+Date_HW10_Start <- "Monday, 25 October"
+Time_HW10_Start <- "12 am"
+
+Name_HW11 <- "Correlation"
+Date_HW11_Start <- "Monday, 1 November"
+Time_HW11_Start <- "12 am"
+
+Name_HW12 <- "Simple regression"
+Date_HW12_Start <- "Monday, 8 November"
+Time_HW12_Start <- "12 am"
+
+Name_HW13 <- "Paired-samples t-test"
+Date_HW13_Start <- "Monday, 15 November"
+Time_HW13_Start <- "12 am"
+
+Date_HW_all_Due <- "Wednesday, 8 December"
+Time_HW_all_Due <- "11:59 pm"
+
+# General due time
+
+# Support Tasks
+Name_SupportTask1 <- "Topic Brainstorm"
+Date_SupportTask1 <- "Saturday, 4 September"
+Time_SupportTask1 <- "5 pm"
+
+Name_SupportTask2 <- "Finalize Study Designs"
+Date_SupportTask2 <- "Friday, 17 September at 11:59 pm"
+
+Name_SupportTask3 <- "Full Dataset for Semester"
+Date_SupportTask3 <- "Friday, 1 October at 11:59 pm"
+
+Name_SupportTask4 <- "Statistical Output for Method section"
+Date_SupportTask4 <- "Friday, 8 October at 11:59 pm"
+
+Name_SupportTask5 <- "Statistical Output for t-test"
+Date_SupportTask5 <- "Friday, 22 October at 11:59 pm"
+
+Name_SupportTask6 <- "Statistical Output for ANOVA"
+Date_SupportTask6 <- "Friday, 29 October at 11:59 pm"
+
+Name_SupportTask7 <- "Statistical Output for Correlation"
+Date_SupportTask7 <- "Friday, 12 November at 11:59 pm"
+
+Name_SupportTask8 <- "Statistical Output for Regression"
+Date_SupportTask8 <- "Friday, 12 November at 11:59 pm"
+
+# Rough Drafts
+Date_RoughDraft1 <- "by 10:00 am, the day of your lab, 20/22 September"
+Date_RoughDraft2 <- "by 10:00 am, the day of your lab, 11/13 October"
+Date_RoughDraft3 <- "by 10:00 am, the day of your lab, 1/3 November"
+Date_RoughDraft4 <- "by 11:59 pm, 19 November"
+
+#### CHANGE THESE DATES TO PUT TIME BETWEEN ROUGH DRAFT###
+# Final Drafts
+Date_FinalDraft1 <- "Before your own lab begins, 4 or 6 October"
+Date_FinalDraft2 <- "Before your own lab begins, 25 or 27 October"
+Date_FinalDraft3 <- "Before your own lab begins, 15 or 17 November"
+Date_FinalDraft4 <- "8 December by 11:59 pm"
+
+```
+
+
+# Overview
+
+<!-- Course Info -->
+
+## Sections
+
+```{r Import_CourseInfo}
+
+CourseInfo <- read_tsv("tables/CourseInfo.tsv", na="") 
+
+```
+
+
+```{r CourseInfoHtml, eval=T}
+
+CourseInfo2 <- CourseInfo %>% select(3:7)
+
+CourseInfo2 %>%
+  kbl(caption = "Section Information for PSYC 301, both taught by Dr. Patrick Bolger") %>%
+  row_spec(0:0, bold = T, color = "white", background = "#500000") %>%
+  kable_styling(bootstrap_options = "responsive", font_size=14, full_width = F, position = "left")
+
+```
+
+
+<!-- Only one of the code chunks above and below can be run. The one that is run should have eval=T as a code-chunk option, whereas the other should have eval=F. Above is for html only. Below is for everything else.-->
+
+
+```{r CourseInfoNotHtml, results = 'asis', eval=F}
+
+ pandoc.table(CourseInfo, style = "multiline", split.table = Inf, missing = "")
+
+```
+
+## People
+
+```{r Import_PeopleInfo}
+
+PeopleInfo <- read_tsv("tables/PeopleInfo.tsv", na="") 
+
+```
+
+```{r PeopleInfoHtml, eval=T}
+
+# Removed headers unnecessary in html table
+PeopleInfo2 <- PeopleInfo %>% select(1,4:7)
+
+PeopleInfo2 %>% 
+  kbl(caption = "People") %>%
+  pack_rows("Main Instructor", 1, 1, background = "#D6D3C4") %>%
+  pack_rows("Lab TAs for Section 989, Mondays, 10am-12pm, Milner 202", 2, 3, background = "#D6D3C4") %>%
+  pack_rows("Lab TA for Section 990, Mondays, 12-2pm, Milner 202", 4, 4, background = "#D6D3C4") %>%
+  pack_rows("Lab TA for Section 991, Mondays, 2-4pm, Milner 202", 5, 5, background = "#D6D3C4") %>%
+  pack_rows("Lab TAs for Section 992, Mondays, 4-6pm, Milner 202", 6, 7, background = "#D6D3C4") %>%
+  pack_rows("Lab TA for Section 994, Wednesdays, 10-12pm, Milner 202", 8, 8, background = "#D6D3C4") %>%
+  pack_rows("Lab TAs for Section 995, Wednesdays, 12-2pm, Milner 202", 9, 10, background = "#D6D3C4") %>%
+  pack_rows("Lab TA for Section 996, Wednesdays, 2-4pm, Milner 202", 11, 11, background = "#D6D3C4") %>%
+  pack_rows("Lab TA for Section 998, Wednesdays, 4-6pm, Milner 202", 12, 12, background = "#D6D3C4") %>%
+  pack_rows("Undergraduate Teaching Scholar for Sections 989-992", 13, 13, background = "#D6D3C4") %>%
+  pack_rows("Undergraduate Teaching Scholar for Sections 994-996; 998", 14, 14, background = "#D6D3C4") %>%
+  row_spec(0:0, bold = T, color = "white", background = "#500000") %>%
+  kable_styling(bootstrap_options = "responsive", font_size=14, full_width = F, position = "left")
+
+```
+
+<!-- Only one of the code chunks above and below can be run. The one that is run should have eval=T as a code-chunk option, whereas the other should have eval=F. Above is for html only. Below is for everything else.-->
+
+```{r PeopleInfoNotHtml, results = 'asis', eval=F}
+
+emphasize.strong.rows(c(2:3,6:7,9:10))
+pandoc.table(PeopleInfo, style = "multiline", split.table = Inf, missing = "", caption = "Row-adjacent TAs in boldface share a lab section.")
+
+```
+
+$\dagger$ Strikethrough font means that the office location is for documentation purposes only. Student hours are online only.
+
+$\dagger\dagger$ Exceptions are during the week of 6-10 September, when Dr. Bolger will hold office hours on Monday, 6 September, from 10am-12pm, and during the week of 4-8 October, when he will also hold office hours on Monday, 4 October, from 10am-12pm.
+
+# Details 
+
+## Class 
+
+### Description
+
+>Statistics is the art of stating in precise terms that which one does not know. 
+-- William Kruskal
+
+<br/>
+
+>Statistics is a body of methods for making wise decisions in the face of uncertainty -- Wallis & Roberts (1956)
+
+Statistics is the math of estimation, prediction, and uncertainty. The course will teach you to use a broad set of statistical methods to analyze data and interpret hypothesis tests. We will emphasize statistical reasoning and its interpretation rather than memorization of formulas. You will be trained to be critical consumers of research findings described in both the scientific literature and popular media. You will have to perform calculations during exams but these require nothing more than basic algebra. The emphasis of this class is on understanding the *logic* of the statistical methods. **If you can use a simple four-function calculator, you can do statistics**. 
+
+This class also includes a lab component where you will learn how to use statistical software, specifically the free, open software platform [jamovi](https://www.jamovi.org/), and write up results of your own research, which you conduct in group projects.
+
+<br/>
+
+### Meetings
+
+Meetings for the main class are remote and synchronous.
+
+<br/>
+
+### Special Designation
+
+*Writing Intensive (W)*
+
+This course is a [university designated “W” course](http://writingcenter.tamu.edu/Students/W-C-Courses). Although statistics may not seem like the most obvious class to be writing-intensive, effective communication about statistical analyses and the interpretation of results is a crucial part of psychological science. Writing well is a set of skills that can be developed with deliberate practice. You will have the chance to develop such skills in this course.
+
+Accordingly, since it is a 4-unit "W" course, at least 25% of your grade must be based on writing. In this class, it is `r paste0(round((R/N)*100,0),"%")` ***(`r R` points out of `r N`)***. 
+
+Additionally, as per the rules of the [Department of Psychological and Brain Sciences](https://liberalarts.tamu.edu/psychology/), you must pass the writing portion of the course with at least 60% of the points on the writing assignments. For this class, this means that **your total summed score across all final drafts of papers must reach at least `r round(R*.6,0)` out of `r R` points.** 
+
+**Failure to obtain `r round(R*.6,0)` points for the four final drats will result in a failure to pass _PSYC 301_ altogether, irrespective of your cumulative score out of `r N` for the entire class (main class + lab).**
+
+Two additional rules: 
+
+- **You must turn in eight writing products total in order to pass the class.** These comprise the rough and final drafts for all four writing assignments.  
+- The final draft of each writing assignment must also **show changes based on the feedback on the respective rough draft.** 
+
+Failure to turn in **all eight** of these products with significant changes between each rough-final draft pair will result in failure of the entire *PSYC 301* course.
+
+<br/>
+
+### Prerequisites  
+
+Grade of C or better in *PSYC 107*; *MATH 140* or *MATH 150* with a grade of C or better, *MATH 168*, *MATH 142*, *MATH 166*, *MATH 151*, *MATH 171*, *MATH 131*, or *MATH 147*; major in psychology. 
+
+<br/>
+
+### Course Catalog Description  
+
+If you are interested for some reason, the [description from the Undergraduate Course Catalog](https://catalog.tamu.edu/undergraduate/course-descriptions/psyc/) is quoted below.
+
+>PSYC 301 Elementary Statistics for Psychology  
+Credits 4. 3 Lecture Hours. 2 Lab Hours.  
+Practical knowledge of statistics up through analysis of variance. Practice sessions devoted to numerical problems. Will not satisfy mathematics requirement in College of Liberal Arts curricula.  
+
+<br/>
+
+## Lab 
+
+### Description
+
+This lab is designed to complement the lecture portion of *PSYC 301*. In lecture, you will learn the logic behind various statistical tests, how they are computed, and how to interpret them. 
+
+In lab, you will apply this knowledge and learn both to run statistical tests (using software) and to write about the results for professional reports. This is similar to what psychological researchers do every day (in part). 
+
+The central focus of the lab is the *Research Project*, which is carried out in small groups, and comprises the following components, not all in chronological order:  
+
+- Designing a survey  
+- Collecting data  
+- Organizing the data for analysis  
+- Analyses  
+  - a *t*-test  
+  - a oneway ANOVA  
+  - a correlation  
+  - a simple regression  
+- Writing  
+  - Rough drafts  
+  - Final drafts  
+  
+Again, these will be carried out in groups of about 4-6 students, which are in turn determined by mutual scheduling constraints, as you express them in a survey during the first week of class.
+
+With these groups, you will also engage in further activities that will help you achieve a deeper understanding of the topics covered in lecture. 
+
+Support tasks, writing assignments, and research-group lab tasks are worth just under `r paste0(round((O/N)*100,0),"%")` of your total grade(or `r paste0(O,"/",N)`). 
+
+Thus, actively participating in lab is important for success in this course.
+
+There is much more information about these assignments and tasks under the  heading **Tasks** (section \@ref(Tasks)), as well as **Grades** (section \@ref(Grades)).
+
+<br/>
+ 
+### Meetings
+
+Meetings for the all the labs are weekly and face-to-face. If students need to quarantine, we have *Zoom* on all the computers in Milner 202 so that groups can still meet.
+
+<br/>
+
+# Outcomes 
+
+## Class
+
+At the end of the main class in *PSYC 301*, the successful student should be able to critically evaluate quantitative information in psychological research, the main sub-skills of which are listed below (success measured on exams and homework problems):  
+
+- Understand how *constructs*, *operationalization*, and *variables* relate to each other in scientific measurement   
+- Understand what *Null Hypothesis Significance Testing* (NHST) is, along with Type I and Type II errors, and the the controversy surrounding the NHST approach  
+- Understand the various sources of the *replication crisis*, and what future researchers need to do to change this state of affairs  
+- Understand how probability and descriptive statistics work together to make larger inferences, with special emphasis on the following:  
+  - Understanding what *p*-values are and are *NOT*  
+  - Understanding what confidence intervals are and are *NOT*  
+- Interpret inferential statistics to evaluate the following:  
+  - Whether there are differences between two or more groups  
+  - Whether there are linear associations between two or more variables  
+- Compute and evaluate simple effect sizes  
+- Understand how the parametric statistics covered in this class are not disparate techniques, but rather form a unified family of techniques  
+
+## Lab
+
+At the end of the lab *PSYC 301*, the successful student should be able to do all the of the following:  
+
+- Design and collect data that can be analyzed statistically, as measured by the quality of the Google Forms survey  (*Support Task #2*)  
+- Import data into *jamovi* for statistical analysis, as measured by success in getting the data from Google Drive into *jamovi* (*Support Task #3*)  
+- Analyze data for diagnostic, inferential, and visual analysis in *jamovi*, as measured by *support tasks #4-8*    
+- Write a primary-research manuscript in the [IMRaD format required by the American Psychological Association (APA)](https://tamu.libguides.com/apa), as measured by the writing assignments  
+- Work together effectively in small groups  
+
+<br/>
+
+## University 
+
+Texas A&M University has identified student learning outcomes that describe our institutional commitment to your educational goals. These include the ability to demonstrate critical thinking, effective communication, and social, cultural, and global competence. Please see [https://catalog.tamu.edu/undergraduate/general-information/student-learning-outcomes/](https://catalog.tamu.edu/undergraduate/general-information/student-learning-outcomes/). 
+
+<br/>
+    
+### Knowledge Required for the Degree  
+
+As the field of Psychology in the modern era requires significant quantitative skills, you will learn to use statistical techniques to summarize sample data (descriptive statistics) and how to use that sample data make inferences about population parameters (inferential statistics). You will learn how to distinguish claims of statistical significance (null-hypothesis significance testing, confidence intervals, etc.) from claims about substantive or practical significance (effect size).  
+
+<br/>
+
+### Critical Thinking  
+
+You will learn how to critically evaluate statistical results and quantitative information reported in psychological research.  
+
+<br/>
+
+### Communication  
+
+You will learn how to communicate statistical results to other researchers in Psychology. You will learn how to interpret statistical information presented in scientific reports.   
+
+<br/>
+
+### Personal and Social Responsibility  
+
+You will consider how data should be collected, presented, and interpreted in an ethical manner. You will learn about the importance of transparency in conducting and reporting statistical analyses.  
+
+<br/>
+
+### Collaboration  
+
+You will work in teams to design a study and collect data. Almost all research projects in the field of Psychology are collaborative in the modern era.
+
+
+# Tasks {#Tasks}
+
+## Exams in Main Class
+
+### Overview
+
+There will be four exams (the 4th being the ***cumulative*** final exam), each worth `r A` points (summing to `r A*B` points, or `r paste0(round(((A*B)/N)*100,0),"%")` of your total grade). 
+
+Exams will include calculations and multiple-choice questions. Exams 1-3 (but not the final) will be explicitly focused on the topics covered in just that section of the course. ***But note again that the final exam is cumulative***.
+
+These exams will all be online through the [Respondus Lockdown Browser](https://web.respondus.com/he/lockdownbrowser/). The *Lockdown Browser* is a special browser that shuts down all your other applications on that computer while you take exams.
+
+In the *Respondus Lockdown Browser*, you'll need to do the following before any exam:  
+
+- verify your student ID  
+  - If you have not been on campus this semester and are fully remote, you should log in to the Howdy Portal and click on the ***My Profile*** tile. In the top right corner, you will see you ***Aggie Card photo*** along with your full ***name*** and ***UIN***. You may choose to take a screenshot of this display with your smart phone or print it out in order to present for online classes and exams.  
+- perform an environment check to show that your environment doesn't have notes  
+- record the exam with your webcam  
+
+A simple calculator will be available on screen.  
+
+You can look down to write down answers on a blank piece of paper. Otherwise, you should be looking at the screen.
+
+---
+
+### Exam re-takes {#ExamReTakes}
+
+The good news is that the exams in this class are now more of a *formative* nature instead of *summative* nature. This means that the tests are more focused on helping you learn rather than assessing your knowledge, per se.
+
+The translation for you is that in this course, you can re-take each exam up to 3 times within the exam date-interval, starting on the calendar day ***after*** your 1st attempt (if you request it on the Google Form that will be provided). We will accept your highest score of the 1-to-3 attempts on each exam that you take/re-take.
+
+**However**, there are some ground rules to this process. Details are provided below:  
+
+
+1. The earliest you can re-take any exam is the next calendar day.  
+
+2. To re-take the exam, you will need to indicate your intention on a *Google Forms* survey that we will provide. From there, we will set things up so that you can re-take the exam starting the calendar day after you last attempted it. Do this as early as possible after you take the exam since we will have 24 hours to respond to your survey response.  
+
+3. We will take your **highest** score as your final score for that exam      
+Remember, if you do poorly on any exam, you just take it again. These are a little more like formative exams, and less like summative exams. It works in your favor to study between attempts, however. We hope you feel that the benefit of multiple attempts is worth the extra trouble.
+
+
+### Key Exam Dates {#ExamReTakesSummarized}
+
+- Exam 1  
+  - The attempt window begins on `r Date_Exam1_Start` at `r Time_Exam1_Start`  
+  - The attempt window ends on `r Date_Exam1_Finish`at `r Time_Exam1_Finish`  
+- Exam 2
+  - The attempt window begins on `r Date_Exam2_Start` at `r Time_Exam2_Start`  
+  - The attempt window ends on `r Date_Exam2_Finish`at `r Time_Exam2_Finish`  
+- Exam 3  
+  - The attempt window begins on `r Date_Exam3_Start` at `r Time_Exam3_Start`  
+  - The attempt window ends on `r Date_Exam3_Finish`at `r Time_Exam3_Finish`  
+- Final Exam  
+  - The attempt window begins on `r Date_Final_Start` at `r Time_Final_Start`  
+  - The attempt window ends on `r Date_Final_Finish`at `r Time_Final_Finish`  
+  
+### Exam guidelines
+
+There are more exam guidelines, but since the exams will be online, we have included these guidelines in section \@ref(OnlineExamGuidelines) below. This is because the guidelines are tightly related to how to use the *Respondus Lockdown Browser*.
+
+<br/>
+
+## Homework Problems in Main Class
+
+The homework problems$^{\dagger\dagger}$ assigned in the main class involve calculations. They will appear online in during the times indicated in the table below and on the course schedule (section \@ref(MainClassSchedule)), and you have until the end of the semester to finish them (`r Date_HW_all_Due` at `r Time_HW_all_Due`). However, you probably do not want to wait that long. They can be quite involved, and will probably take you between 1/2 hour and an hour to complete (especially the more difficult ones).
+
+You also have to get ***all*** the answers right. This can be a little frustrating. If you don't get them all right on any given attempt, you just start over (but you will get a different data set every time you re-try the problem). You have an unlimited number of attempts.
+
+These attempts ***do*** get recorded using the *Respondus Lockdown Browser*. This is just to deter having someone else do the problem for you, or help you do it. But it is not an exam since there are unlimited attempts.
+
+There are thirteen of them. See below.
+
+$\dagger\dagger$ Note that these ***used*** to be the short-answer/calculation problems on previous exams. The exams themselves are now purely multiple choice.
+
+```{r ImportHWProbs}
+HWProbs <- read_tsv("tables/HWProbs.tsv")
+```  
+
+```{r diplayHWProbs, eval=T}
+HWProbs %>%
+kbl(caption = 'Homework Problems by Date') %>%
+  pack_rows("Monday, 6 September at 12 am", 1, 1, background = "#D6D3C4") %>%
+  pack_rows("Monday, 13 September at 12 am", 2, 3, background = "#D6D3C4") %>%
+  pack_rows("Monday, 20 September", 4, 4, background = "#D6D3C4") %>%
+  pack_rows("Monday, 27 September", 5, 6, background = "#D6D3C4") %>%
+  pack_rows("Monday, 11 October", 7, 7, background = "#D6D3C4") %>%
+  pack_rows("Monday, 18 October", 8, 8, background = "#D6D3C4") %>%
+  pack_rows("Monday, 25 October", 9, 10, background = "#D6D3C4") %>%
+  pack_rows("Monday, 1 November", 11, 11, background = "#D6D3C4") %>%
+  pack_rows("Monday, 8 November", 12, 12, background = "#D6D3C4") %>%
+  pack_rows("Monday, 15 November", 13, 13, background = "#D6D3C4") %>%
+  kable_styling(bootstrap_options = "responsive", font_size = 11, full_width = F, position = "left") %>%
+  row_spec(0:0, bold = T, color = "white", background = "#500000") %>%
+  footnote(general = c("All homework together sum to 100 points"))
+```  
+
+
+## Extra credit {#ExtraCredit}
+
+There is only one kind of extra credit in this course. In addition to the four reviews you are required to do, you are also allowed (but not required) to do up to 4 extra peer reviews during the peer-review period in *Peerceptiv*. Your extra credit, however, is not reflected in a separate grade column in *Canvas* Rather, it is reflected directly in your grade for the particular assignment in *Peerceptiv*. That is, *Peerceptiv* takes care of your extra-credit points, not us.  
+
+Otherwise, there is no extra credit in this course (though the formative exams and homework problems might be considered an indirect way of doing this).  
+
+***So please do not ask us at the end of the semester about extra-credit opportunities. The answer is always "No."***
+
+## Tasks in Lab 
+
+Briefly, what you learn as theory in the main class, you carry out in the lab portion of the course.
+
+There are `r O` points possible in the lab, the majority of which is carried by the research project (`r P`points), and a minority by weekly tasks carried out in lab (`r C*D` points).
+
+<br/>
+
+### Research Project 
+
+You will be carrying out a small research project in groups of about four students. This project is broken down into various parts.
+
+- There will be `r G` *Support Tasks* that you turn in as a group, each worth `r E` for a total of `r E*G` points. The support tasks revolve around research design, data collection, preparation, and analysis.  
+- You will also write somewhat simplified version of an [APA primary-research manuscript](https://tamu.libguides.com/apa). This will come in the form of four writing assignments, each of which in turn comprises a rough and a final draft.  
+  - The `r I` rough drafts are each worth `r H` points (`r H*I` total), and are peer-reviewed (by your classmates) through [Peerceptiv](https://www.peerceptiv.com/).  
+  - The final drafts have varying point values. See below.  
+  
+<br/>
+
+#### Support Tasks 
+
+There are a total of `r G` *Support Tasks* Each is worth `r E` points, or `r E*G` points total. This amounts to `r paste0(round(((E*G)/N)*100,0),"%")` of the total final grade. 
+
+Support Task 1 is done by individual, and has an absolute deadline. Support Tasks 2-8 are done in groups, and groups lose a point for each day these tasks are late.
+
+The are listed in order below.
+
+<br/>
+
+##### Brainstorm (1 task) 
+
+Students will brainstorm on possible topics through a survey provided by the main instructor. When this survey is completed, the instructor will assign `r E` points to those who completed the survey on time. This is due at the latest on `r Date_SupportTask1` at **5 pm**.
+
+<br/>
+
+##### Design (1 task)  
+
+Students will design their study in *Google Forms* in a *Google Drive* folder (specific folders shared out of the head instructor's *Google Drive* account).$^{\dagger\dagger}$ When the design is approved by the TA, the group members get `r E` points each. This is due `r Date_SupportTask2`.
+
+$\dagger\dagger$This, and all subsequent tasks, will be associated with documents that are housed in a *Google Drive* folder that has been assigned to you in the head instructor's *Google Drive*. This is the only location considered official for your documents. Do not create any other *Google Drives* or use any other cloud-storage tools for this class.
+
+<br/>
+
+##### Data (1 task)  
+
+The groups will collect data. When that data collection is complete and the data have been saved into a *jamovi* file (.omv), uploaded into the same Google Drive folder, and approved by the TA, each member of the group will get `r E` points. This support task is due `r Date_SupportTask3`.
+
+<br/>
+
+##### Outputs (5 tasks)  
+
+There are four writing assignments, but the last three require several data-analysis steps. Writing Assignment #2 requires one data analysis, and the last two writing assignments each require two data analyses. This sums to five outputs. Each of these statistical outputs will be added to the **same jamovi file** in the same Google Drive folder. Each group member will get `r E` points when each of these analyses is approved as adequate by the TA.
+
+***IMPORTANT NOTE: Please do not put multiple .omv files in the Google Drive Folder. This makes it difficult for the TA to determine which is the correct one.***
+
+Due dates:  
+
+- Support task 4 is due `r Date_SupportTask4`  
+- Support task 5 is due `r Date_SupportTask5`  
+- Support task 6 is due `r Date_SupportTask6` 
+- Support task 7 is due `r Date_SupportTask7`  
+- Support task 8 is due `r Date_SupportTask8`  
+
+---
+
+<br/>
+
+#### Writing Assignments 
+
+There are four writing assignments (divided into 4 rough and 4 final drafts) totaling `r Q` points out of `r N`, or `r paste0(round((Q/N)*100,0),"%")` of the class total.  
+
+The four writing assignments correspond roughly to the sections typically found in a published original-research paper in Psychology (*IMRaD* -> *Introduction*, *Method*, *Results*, and *Discussion*) . They must also be formatted according to the [manuscript-formatting guidelines of the American Psychological Association](https://tamu.libguides.com/apa).  More details about this are in the [lab manual](https://patrickabolger.github.io/ElemStatsLabManual/) (Bolger, 2020).
+
+Recall that this is a "W" course. As such, you are required to submit both **rough drafts** (section \@ref(RoughDrafts)) and **final drafts** (section \@ref(FinalDrafts)) of writing assignments. See the respective sections below for more details on these assignment types.
+        
+##### Rough Drafts {#RoughDrafts}  
+
+***Read this section carefully. It is the most complex part of this course.***
+
+There are `r I` rough drafts at `r H` points each, which is `r H*I` points total, or `r paste0(round(((H*I)/N)*100,0),"%")` of the class total.
+
+Each rough  of the `r I` rough drafts serves as a draft for your peers to review online. As one of these peer review-**ers**, **you** will review four other papers. You will then use the feedback from others to revise your own final draft. 
+
+---
+
+You might also get direct feedback from your TA. TAs will randomly spot-review about 20-25% of the papers assigned to them.
+
+These rough drafts are due on the following dates and times:
+
+- Assignment #1 (rough draft): `r Date_RoughDraft1`  
+- Assignment #2 (rough draft): `r Date_RoughDraft2`  
+- Assignment #3 (rough draft): `r Date_RoughDraft3`  
+- Assignment #4 (rough draft): `r Date_RoughDraft4`  
+
+***Note that the last of this is due on `r Date_RoughDraft4` at 11:59 pm for ALL sections. This is so that we can finish the final peer review without encroaching on Reading Day (24 November), or the Thanksgiving Holiday (25-26 November).***
+
+Rough drafts must be turned in via [Peerceptiv](https://peerceptiv.zendesk.com/hc/en-us/articles/115004505373-What-is-Peerceptiv-) within *Canvas*. A special link is provided in *Canvas*. Note that you **must** access [Peerceptiv](https://www.peerceptiv.com/) assignments from within *Canvas* using that special link. **Do not** go to the [Peerceptiv](https://www.peerceptiv.com/) website to log in; this leads to problems. 
+
+Turning in your rough draft late leads to accruing penalties in two ways:
+
+1. Submitting your rough draft at any time ***between*** 10 am on the day of your lab and 10 am of the subsequent day is a submission during the "grace period". It will result in an automatic 50% off your peer-review grade (or `r round(H*.5,1)` our of `r H` points). If you upload your draft on time (or at least by the end of the grace period), the grading of the rough draft is done automatically through [Peerceptiv](https://www.peerceptiv.com/) as other students receive your draft and evaluate it.  
+
+2. If you miss the grace period, then you will need to submit your draft to a *Turnitin* assignment that will appear after the grace period (It will be named something like *Late Rough Draft of Writing Assignment #X*). Your TA will then evaluate the paper using the same rubric, and the main instructor will apply the appropriate late penalties. More information is below.  
+
+- Penalties   
+  - First, your TA will be forced to evaluate your paper personally since you will be locked out from the peer-review process in *Peerceptiv*.$^{\dagger\dagger}$ The main instructor will apply the 50% penalty to the rough draft that [Peerceptiv](https://www.peerceptiv.com/) ***would*** have applied anyway had you uploaded it during the grace period.  
+  - Second, you will receive **additional** cumulative 10% deductions off your **FINAL draft** for every 24-hour period (10 am one day to 10 am the next day) that the **ROUGH draft** is late after the grace period. This penalty accrues on your final draft (and not your rough draft) since (understandably) *Peerceptiv* will not allow you to upload a document **after the grace period**. The 10% penalty on your final draft accrues each day for 10 days after the grace period, at which point you can no longer get any points for the final draft (i.e., the penalties will have accrued to 100%). 
+
+$\dagger\dagger$ *Peerceptiv* does this because your paper probably will not get reviewed by a peer at all after the grace period. This is because everyone else will be finishing up with their reviews. 
+
+##### Final Drafts {#FinalDrafts}  
+
+(varying points each [see bullet points below]; `r R` points total)  
+
+- Final Draft of Writing Assignment #1:  `r J`/`r R` points (or `r paste0(round((J/R)*100,0),"%")`)  
+- Final Draft of Writing Assignment #2:  `r K`/`r R` points (or `r paste0(round((K/R)*100,0),"%")`)  
+- Final Draft of Writing Assignment #3:  `r L`/`r R` points (or `r paste0(round((L/R)*100,0),"%")`)  
+- Final Draft of Writing Assignment #4:  `r M`/`r R` points (or `r paste0(round((M/R)*100,0),"%")`)  
+
+<br/>
+
+You will apply the feedback from your rough draft to your final (improved) draft. This is due **by the time your lab meets, usually two weeks after the peer review.** 
+
+Specifically, they are due at 10 am on the following dates:  
+- Assignment #1 (final draft): `r Date_FinalDraft1`  
+- Assignment #2 (final draft): `r Date_FinalDraft2`  
+- Assignment #3 (final draft): `r Date_FinalDraft3`  
+- Assignment #4 (final draft): `r Date_FinalDraft4`  
+
+Final drafts must be turned in via [Turnitin](https://help.turnitin.com/feedback-studio/blackboard/basic/student/student-category.htm), which will be linked on *Canvas*. Note that there is no need to access anything from the [Turnitin](https://www.turnitin.com/) website itself, except for help files, if you need them. Uploading your files to [Turnitin](https://www.turnitin.com/) directly (outside of *Canvas*) will cause problems.  
+
+Turning in your final draft late accrues penalties daily. Specifically, 10% will be deducted from the grade of your final version for each 24-hour period the assignment is late after the initial deadline. These penalties will accrue for up to 10 days after the initial deadline, after which is will certainly be worth zero points (a 100% would have accrued). Note however, that if you have penalties carrying over from a rough draft turned in after the grace period (see above), fewer days will elapse before you reach a zero-point maximum on your final draft.
+
+<br/>
+
+#### Important requirements
+
+<br/>
+
+##### The 60% requirement {#The60PctReq}
+
+**NOTE THAT IRRESPECTIVE OF YOUR GRADE FOR THE OVERALL CLASS, YOUR SCORE SUMMED ACROSS THE FINAL DRAFTS MUST REACH AT LEAST `r R*.595` OUT OF `r R` POINTS IN ORDER TO PASS _PSYC 301_ (60% of `r R`).** 
+
+Note that the points for the rough drafts do not count towards this particular "W" course requirement, but do indeed contribute substantially to your overall grade.
+
+This is also covered under *Grades* below (specifically, section \@ref(GradeThe60PctReq)).
+
+<br/>
+
+##### Absolute two-draft requirement {#Abs2DraftReq}
+
+You must turn in two drafts per assignment, amounting to a total of 8 drafts. This entails that you cannot submit a final draft without already having submitted a rough draft and received feedback on it. For example, if you think you just want to skip the rough draft, and just submit what you think is your "final draft" on the day that the final draft is due, you will find that your submission is worth 0 points towards the final draft. Instead, you will receive whatever amount of credit you can still muster on your rough draft, plus any penalties on your final draft. This is followed by a minimum of 1 day, after which point, you can submit your final draft (with substantial changes based on instructor feedback). For that one day, you will not lose points, but the 10%-deduction clock begins after the 24-hour period has expired. 
+
+This is also covered under *Grades* below (specifically, section \@ref(GradesAll8Drafts)).
+
+<br/>
+
+##### Substantial revision requirement
+
+Each final draft must reflect substantial changes from the respective rough draft, and these changes must both be commensurate with and accommodate the feedback on that rough draft. If we find that your have turned in a final draft that has not taken the feedback seriously, we reserve the right to return it to you to revise again. In this case, the late-submission clock re-sets itself to the day we notice the failure to make substantial changes. It continues to "tick" daily after that point, however.
+
+These are not covered further in *Grades* below (section \@ref(Grades)) since we will just reject and return the draft to you for further revision in this case.
+
+<br/>
+
+##### Independence and originality requirements 
+
+Although these are group projects, **each student works independently on typing and completing each writing assignment** throughout the semester. Plagiarism is not permitted in this class (nor is it ever, anywhere, in case you "missed [the memo](https://library.tamu.edu/services/library_tutorials/academic_integrity/academic_integrity_3.html)".  
+
+You may ask questions of each other (especially your group-mates) to help complete these assignments. HOWEVER, every person must turn in an individual assignment and no two (or more) students’ assignments should be identical in form or even similar (content yes; form no). To clarify, you can be saying the same thing, but your wording cannot match or even be similar. Assignments that are too similar may not be graded and may be treated as violations of the honor code, specifically: plagiarism. You will get a lecture on plagiarism in lab.
+
+Violations of this requirement are also not covered further in *Grades* below (section \@ref(Grades)) since each case is unique and has to go through the [Aggie Honor System Office](https://aggiehonor.tamu.edu/) (AHSO) to finalize grading penalties (and possibly more).
+
+Typically, the penalty we apply is a zero for the assignment. But penalties can be more severe if we so determine, or if the student has a previous record with AHSO.
+
+Note that reporting to AHSO is mandatory for professors in such cases (if the professor determines that such academic dishonesty has occurred). 
+
+Also, ***do not bother your TAs with issues of plagiarism***. Their job is to identify the *possibility* of plagiarism, and then contact the head professor. They are merely the messenger. Once the issue reaches the professor, it is out of the TA's hands. And the student will only be notified ***after*** the issue has reached the professor. So in sum, do not contact the TA about any kind of academic dishonesty that is suspected on your part; communicate only with the head professor.
+
+<br/>
+
+#### Helpful hints
+
+##### Confirming your uploads 
+
+[Peerceptiv](https://www.peerceptiv.com/) and [Turnitin](https://www.turnitin.com/) have different ways of confirming your uploads:  
+
+1. For [Peerceptiv](https://www.peerceptiv.com/), make sure that it says “Document Submitted” (after submitting) [take a screenshot if you want proof]; if it doesn’t, **SUBMIT AGAIN**.  
+2. For [Turnitin](https://www.turnitin.com/), please make sure that you get an email confirmation from [Turnitin](https://www.turnitin.com/); if you don't, **SUBMIT AGAIN**.  
+
+##### Cloud-based documents
+
+We are now ***requiring*** that you write your papers as a [Google Doc](https://google.tamu.edu/Apps/app_list.html).
+
+This is actually to help you, and my guess is that from here on you, you will ***want*** to write all your papers as *Google Docs*.
+
+Here's why:
+
+***Versioning***. *Google* will save versions of your documents automatically, meaning that it will save time-stamped snapshots of your document as you work on it. The primary advantage to this (and this is ***HUGE***) is that you can prove to your professors (even in other courses) that a particular draft was completed at a particular time (And in case you were wondering, this problem comes up ***every single semester***, no exceptions so far).
+
+*Microsoft 365* also does this (with *Word* documents on that cloud service), but *Google* is a little bit better since you can control the versioning yourself. That is, if you go to *File* > *Version history* > *Name current version*, then you vsn give a name to whatever version you just finished working on (e.g., *WA1_FinalRoughDraftForPeerceptiv*). Then, if you ever happen to mess up the uploading to *Peerceptiv* (which happens every semester for some students, even the best ones), all you need to do is grant your professor *Editor* privileges to the document, and they can see all the versions of the document, the time stamps, and even compare them for changes. 
+
+In *Office 365*, it seems that you need to trust *Microsoft* to create versions for you automatically. This is why we want you to use *Google Docs*.
+
+### Attendance 
+
+(`r C*D` points [`r C` points $\times$ `r D` physical attendances], or `r paste0(round(((C*D)/N)*100,0),"%")` of the total grade)  
+
+Lab attendance is important for mastering material.
+
+# Grades {#Grades}
+
+## Breakdown by Assignment
+
+Final grades will be assigned at the end of the semester on the basis of the total number of points earned out of a possible `r N` points, based on the following components:  
+
+
+| Locus | Component | Points per Component | Number of Components | Total Points | % |
+|:----------:|:-------------:|:--------------------:|:--------------------:|:------------:|:----:|
+| Main Class | Exams | `r A` | `r B` | `r A*B` | `r paste0(round(((A*B)/N)*100,0),"%")` |
+| Main Class | Easier HW Problems | `r U` | `r V` | `r U*V` | `r paste0(round(((U*V)/N)*100,0),"%")` |
+| Main Class | Harder HW Problems | `r W` | `r X` | `r W*X` | `r paste0(round(((W*X)/N)*100,0),"%")` |
+| Main Class | Hardest HW Problems | `r Y` | `r Z` | `r Y*Z` | `r paste0(round(((Y*Z)/N)*100,0),"%")` |
+| Lab | Rough Drafts | `r H` | `r I` | `r H*I` | `r paste0(round(((H*I)/N)*100,0),"%")` |
+| Lab | Final Drafts Assignment #1 | `r J` | 1 | `r J` | `r paste0(round((J/N)*100,0),"%")` |
+| Lab | Final Drafts Assignment #2 | `r K` | 1 | `r K` | `r paste0(round((K/N)*100,0),"%")` |
+| Lab | Final Drafts Assignment #3 | `r L` | 1 | `r L` | `r paste0(round((L/N)*100,0),"%")` |
+| Lab | Final Drafts Assignment #4 | `r M` | 1 | `r M` | `r paste0(round((M/N)*100,0),"%")` |
+| Lab | Support Tasks | `r E` | `r G` | `r E*G` | `r paste0(round(((E*G)/N)*100,0),"%")` |
+| Lab | Attendance | `r C` | `r D` | `r C*D` | `r paste0(round(((C*D)/N)*100,0),"%")` |
+|  |  |  | TOTALS: | `r N` | 100% |  
+
+<br/>
+
+## Final Letter Grades  
+
+<br/>
+
+The *Total Points in Class* tab is what your grade will be, assuming that you have met **Condition 1** (section \@ref(GradeThe60PctReq)) and **Condition 2** (\@ref(GradesAll8Drafts)). Those additional conditions are covered in separately, as you can see below.
+
+<br/>
+
+### Total Points in Class
+
+<br/>
+
+**Below, $y$ represents any particular student's total percentage/points for the course**. Letter grades (with strict cutoffs) will be assigned as follows:   
+
+<br/>
+
+| Grade 	| A 	| B 	| C 	| D 	| F 	|
+|--------	|:------------:	|:---------------:	|:---------------:	|:---------------:	|:---------------:	|
+| Percents 	| 89.5% $\le y$ 	| 79.5% $\le y \lt$ 89.5% 	| 69.5% $\le y \lt$ 79.5% 	| 59.5% $\le y \lt$ 69.5% 	| $y \lt$ 59.5% 	|
+| Points 	| `r N*.895` $\le y$ 	| `r N*.795` $\le y \lt$ `r N*.895` 	| `r N*.695` $\le y \lt$ `r N*.795` 	| `r N*.595` $\le y \lt$ `r N*.695` 	| $y \lt$ `r N*.595` 	|
+
+### Condition 1: The 60% requirement {#GradeThe60PctReq}
+
+<br/>
+
+As noted above in section \@ref(The60PctReq), this is a *W* Course. This means that you must get 60% of the point total for the final drafts in the lab; otherwise, you fail the entire *PSYC 301* course. **Below, $k$ represents any particular student's total percentage/points on the final-draft assignments** (they are collectively worth `r R`  points.)
+
+<br/>
+
+| Grade   | A-D | F |
+|---------|:----:|:----:|
+| Percent |   60% $\le k$  |   $k \lt$ 60%  |
+| Points on Final Drafts ($k$)  |   `r R*.595` $\le k$  |   $k \lt$ `r R*.595`  |
+
+### Condition 2: All 8 drafts submitted {#GradesAll8Drafts}
+
+<br/>
+
+As mentioned above in *Tasks* (section \@ref(Abs2DraftReq)), you **MUST** turn in **all 8** drafts of the writing assignments (4 rough drafts; 4 final drafts); otherwise, you fail the entire course. The grade breakdown is simple, but as follows, **where $j$ is the number of drafts any given student turns in**:  
+
+<br/>
+
+| Grade   | A-D | F |
+|---------|:----:|:----:|
+| Number of Drafts Turned In ($j$) |   $j =$ 8  |   $j \lt$ 8  |
+
+# Schedules 
+
+## Main Class Schedule {#MainClassSchedule}
+
+```{r ImportMainCalendar}
+
+MainCalendar <- read_tsv("tables/ClassCal.tsv", na="") 
+
+```
+
+
+
+```{r diplayMainCalendarHtml, eval=T}
+
+MainCalendar %>%
+kbl(caption = 'Main Class Schedule by Week') %>%
+pack_rows("Unit 1: Background & Descriptive Statistics", 1, 3, background = "#D6D3C4") %>%
+pack_rows("Unit 2: Visualization & Probability", 4, 6, background = "#D6D3C4") %>%
+pack_rows("Unit 3: Inferential statistics you need for your papers", 7, 11, background = "#D6D3C4") %>%
+pack_rows("Unit 4: Other inferential statistics", 12, 15, background = "#D6D3C4") %>%
+pack_rows("Final Exam", 16, 16, background = "#D6D3C4") %>%
+row_spec(0:0, bold = T, color = "white", background = "#500000") %>%
+kable_styling(bootstrap_options = "responsive", font_size=11, full_width = F, position = "left")
+```
+
+<!-- Only one of the code chunks above and below can be run. The one that is run should have eval=T as a code-chunk option, whereas the other should have eval=F. Above is for html only. Below is for everything else.-->
+
+```{r diplayMainCalendarNotHtml, eval=F}
+
+# put code here
+
+```
+
+
+## Lab Schedule  
+
+```{r ImportLabCalendar}
+LabCalendar <- read_tsv("tables/LabCal.tsv")
+```  
+
+```{r diplayLabCalendarHtml, eval=T}
+LabCalendar %>%
+kbl(caption = 'Lab Schedule by Week') %>%
+  pack_rows("No labs", 1, 1, background = "#D6D3C4") %>%
+  pack_rows("Writing Assignment 1: Introduction", 2, 4, background = "#D6D3C4") %>%
+  pack_rows("Writing Assignment 2: Method", 5, 7, background = "#D6D3C4") %>%
+  pack_rows("Writing Assignment 3: Study 1", 8, 10, background = "#D6D3C4") %>%
+  pack_rows("Writing Assignment 4: Study 2 / General Discussion", 11, 13, background = "#D6D3C4") %>%
+  kable_styling(bootstrap_options = "responsive", font_size = 11, full_width = F, position = "left") %>%
+  row_spec(0:0, bold = T, color = "white", background = "#500000") %>%
+  footnote(general = c("NF19 = Navarro & Foxcroft (2019) - your main textbook  ", "Bolger20 = Bolger (2020) - your lab manual  ", "All times refer to the day of your particular lab, unless otherwise specified  ", "However, note that all uploads to *Peerceptive* are due at 10:00 AM on the day of your lab, no matter what time your lab actually meets  "))
+```  
+
+<!-- Only one of the code chunks above and below can be run. The one that is run should have eval=T as a code-chunk option, whereas the other should have eval=F. Above is for html only. Below is for everything else.-->
+
+```{r diplayLabCalendarNotHtml, eval=F}
+
+# put code here
+
+```
+
+# Materials 
+
+## OER
+
+You do not need to purchase anything beyond the university's requirement of a computer, necessary peripherals, and your tuition/fees. Well, almost. The one exception is just a suggestion that you purchase a headset with a microphone in case you need to quarantine. All of the other materials in this course come at no further cost to you. 
+
+That is, they are free, **Open Educational Resources** (OER).
+
+So although these materials are free, they do still exist, and you need to get them. See below.  
+
+---
+
+<br/>
+
+## Textbooks 
+
+<br/>
+
+### Main Class
+
+- Navarro, D. J., & Foxcroft, D. R. (2019). *Learning statistics with jamovi: A tutorial for psychology students and other beginners*. Retrieved from [https://www.learnstatswithjamovi.com](https://www.learnstatswithjamovi.com).
+
+<br/>
+
+### Lab
+
+- Bolger, P. (2020). *A lab guide for PSYC 301: Elementary statistics for psychology*.   [https://patrickabolger.github.io/ElemStatsLabManual/](https://patrickabolger.github.io/ElemStatsLabManual/) CC-BY-SA 2.0 license.  
+
+<br/>
+
+## Hardware 
+
+<br/>
+
+### Main Class
+
+The university now requires you to possess personally the following:  
+
+- a computer with access to the internet ([click here to see A&M's computer requirements](https://it.tamu.edu/services/academics-and-research/teaching-and-learning-tools/computer-requirements/))  
+
+- a webcam  
+
+Technically, no other hardware is required for the main class. 
+
+<br/>
+
+### Lab
+
+Oddly, the university does **not** seem to explicitly require a microphone or speakers. I have to assume it must be implicit with the "integrated webcam." 
+
+- a microphone  
+- speakers (or headphones/earbuds, etc.)  
+- a simple calculator that can do square roots (the one on your smart phone will suffice). But note that during exams, you can use the calculator provided in the [Respondus Lockdown Browser](https://web.respondus.com/he/lockdownbrowser/)  
+
+## Software 
+
+### Main Class
+
+#### Online test-taking technology
+  
+For the "take-home" online exams, the main class requires the use of the [Respondus LockDown Browser](https://web.respondus.com/he/lockdownbrowser/)$^{\dagger\dagger}$ and a webcam. The webcam can be the type that's built into your computer or one that plugs in with a USB cable.
+
+$\dagger\dagger$ ***IMPORTANT***: If you use a *Google Chromebook* and have no access to another computer, please contact the head instructor. There are limitations to using the *Lockdown Browser* with *Google Chromebooks*, so we will need to plan for these limitations.
+
+##### Respondus
+
+Watch this [brief video](https://www.respondus.com/products/lockdown-browser/student-movie.shtml) to get a basic understanding of the LockDown Browser and the webcam feature.
+
+###### Download
+
+- Download and install LockDown Browser from [this link](https://download.respondus.com/lockdown/download.php?id=961615468).
+
+######  Once Installed
+- Start LockDown Browser 
+- Log into *Canvas*  
+- Navigate to the test 
+
+**Note**  
+- You won't be able to access the exams with a standard web browser  
+- If this is tried, an error message will indicate that the test requires the use of LockDown Browser  
+  - Simply start *LockDown Browser* and navigate back to the exam to continue  
+
+##### Honorlock
+
+Honorlock works for Google Chrome only and is simply an [extension to the browser](https://static.honorlock.com/install/extension). There is a test for it when you try to install the extension. You should have a sufficiently fast and reliable internet connection.
+
+You will definitely ***need*** to use Honorlock if you only have access to a Google Chromebook laptop.
+
+Here is a [brief tutorial](https://youtu.be/VjY7cIVaTAw) for students on how to use Honorlock.
+
+#### Online exam guidelines {#OnlineExamGuidelines}
+
+- When taking an online test, follow these guidelines:
+  - Ensure you're in a location where you won't be interrupted. 
+  - Turn off all other devices (e.g. tablets, phones, second computers) and place them outside of your reach. 
+  - Before starting the test, know how much time is available for it, and also that you've allotted sufficient time to complete it  
+  - Clear your desk or workspace of all external materials not permitted - books, papers, other devices  
+  - Remain at your computer for the duration of the test. 
+  - If the computer, Wi-Fi, or location is different than what was used previously with the "Webcam Check" and "System & Network Check" in LockDown Browser, run the checks again prior to the exam. 
+  - To produce a good webcam video, do the following:  
+    - Avoid wearing baseball caps or hats with brims  
+    - Ensure your computer or device is on a firm surface (a desk or table)
+    - Do NOT have the computer on your lap, a bed, or other surface where the device (or you) are likely to move. 
+    - If using a built-in webcam, avoid readjusting the tilt of the screen after the webcam setup is complete  
+    - Take the exam in a well-lit room, but avoid backlighting (such as sitting with your back to a window)  
+- Remember that LockDown Browser will prevent you from accessing other websites or applications  
+  - You will be unable to exit the test until all questions are completed and submitted
+ 
+##### Help
+
+- Several resources are available if you encounter problems with LockDown Browser:  
+  - The Windows and Mac versions of LockDown Browser have a "Help Center" button located on the toolbar  
+    - Use the "System & Network Check" to troubleshoot issues  
+    - If an exam requires you to use a webcam, also run the "Webcam Check" from this area  
+  - You can get support from Texas A&M through [this link](https://ai.tamu.edu/Help-Support/Technical-Support) 
+  - Respondus has a [Knowledge Base](https://support.respondus.com/support/)  
+    - Select the "Knowledge Base" link and then select "Respondus LockDown Browser" as the product  
+      - If your problem is with a webcam, select "Respondus Monitor" as your product  
+    - If you're still unable to resolve a technical issue with LockDown Browser, go to support.respondus.com and select "Submit a Ticket"  
+      - Provide detailed information about your problem and what steps you took to resolve it 
+
+### Lab
+
+- [jamovi](https://www.jamovi.org/) (freeware available for Windows, Mac, Linux, and Chromebook)  
+  - Install the following modules from within jamovi:  
+    - lsj-data - learning statistics with *jamovi* 
+    - scatr  
+
+## Optional Materials 
+
+<br/>
+
+### Main Class
+
+- [LinkedIn Learning](https://linkedinlearning.tamu.edu/) Tutorials  
+
+We have set up a ["collection"](https://www.linkedin.com/learning-login/share?account=74650722&forceAccount=true&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fcollections%2F6617584308850880512) of LinkedIn Learning tutorials available to you for free from within the [Howdy!](https://howdy.tamu.edu/) portal. They correspond pretty well with much of the course material. Links will be provided in the Course Schedule below as well, but more usefully, in *Canvas* under the relevant sections. 
+
+<br/>
+
+### Lab
+
+#### The *University Writing Center*  
+
+Because this class emphasizes writing so much, we encourage you to visit the website for the [University Writing Center](http://writingcenter.tamu.edu/Students/Student-Resources) or UWC. The UWC is a great resource for help with any stage of the writing process and offers help both online and in person. Click [here](https://writingcenter.tamu.edu/Hours-Locations) for hours and locations. Click [here](https://youtu.be/stYgyM8trDo) for a 5-minute YouTube overview video, which is also on their [YouTube Channel](https://www.youtube.com/user/tamuwritingcenter). They also have some interactive learning modulues [here](https://writingcenter.tamu.edu/Students/Writing-Speaking-Guides/Interactive-Lessons-List).
+
+# Policies  
+
+## Main Class Policies 
+
+<br/>
+
+### Classroom Behavior   
+
+*PSYC 301* is a learning community where civility and mutual respect are crucial for success. we will be be prepared to teach the material in an animated, but professional manner. We will treat you like mature members of a learning community. Likewise, we expect that you will **attend the labs, work with your research group on completing tasks in the lab, and be prepared to both learn and contribute to the course in a thoughtful manner.** Let’s be nice to each other and have a great semester!
+
+<br/>
+
+### Grade Disputes  
+
+If you wish to dispute a grade on an assignment or exam, you must submit a written rationale (email is fine) to justify the change **within 1 week of receiving your score in Canvas** for exams, written papers, or lab activities. Submit the rationale to the head instructor if it's an exam score. Otherwise, submit the rationale to your TA.  
+
+<br/>
+
+### Cheating
+
+Cheating in the main class will almost certainly be restricted to taking online exams.
+
+Since the exams are formative now, it makes sense to use every precaution to make sure that cheating does not occur. To this end, you will take exams through either the [Respondus Lockdown Browser](https://web.respondus.com/he/lockdownbrowser/), which you will need to download (for free) through Texas A&M's [Software Center](https://software.tamu.edu/), or the [Honorlock](https://honorlock.com/) system, which is an extension to the Chrome Browser. You will also need a webcam
+
+For exams, there will two steps you need to follow before and during the exams to ensure integrity.  
+
+- Show your photo ID  
+- Record your exam with a webcam  
+
+The lockdown browser and Honorlock both have settings that can require these from you so that you don't forget.
+
+What we really want to make sure of is that you are **you** and that now one else is there helping you. 
+
+More details are below.
+
+### Cheating in the main class
+
+(adapted from wording provided by Drs. Duane and Tilly McVay)  
+
+#### What constitutes academic misconduct?
+
+- ***During*** an examination  
+  - ... looking at another student’s work or using external aids (for example, books, notes, conversation with others, internet resources, etc.) unless specifically allowed in advance by instructor  
+  - ... acquiring answers for any assigned work or examination from any unauthorized source, including obtaining information from students who have previously taken the examination or quiz     
+  - ... knowingly allowing another student to copy your work  
+
+#### Reporting an academic violation – What happens? {#ReportingViolations}
+
+- We will report the violation to [AHSO](https://aggiehonor.tamu.edu/), regardless of the magnitude of the violation.  
+- The report is submitted online and includes the following:  
+  1. the details of the violation$^{\dagger\dagger}$  
+  2. an election to handle autonomously or refer to the Honor Council  
+  3. specification of sanctions, and  
+  4. student acknowledgment of acceptance/rejection of violation and/or sanction, though you have the right to appeal to the AHSO  
+  
+- Importantly, you would then be logged into the AHSO system  
+  - If there is a second violation, you will automatically go before the Honor Council  
+- We will treat students ***giving*** unauthorized help the same as students ***receiving*** help  
+  - Such cases would entail the same course sanctions and reporting to AHSO  
+  
+$\dagger\dagger$ Note that we can use the records from Respondus or Honorlock (or other online proctor) as evidence in our report to AHSO.  
+
+## Lab Policies 
+
+<br/>
+
+### Cheating
+
+<br/>
+
+Cheating in the lab usually takes the form of plagiarism. Plagiarism consists of taking the ideas, words, style, or images (i.e., intellectual products) of another person and passing them off as your own. You are committing plagiarism if you copy the work of another person and turn it in as your own, even if you have their permission. 
+Plagiarism is one of the worst academic crimes because it undermines trust and inhibits the proper allocation of credit for intellectual products. It is the intellectual equivalent of theft.
+
+Suspected violations will be reported to the *Aggie Honor System Office*. Students who plagiarize material on written assignments will **at the very least** receive 0 points for that assignment, but the severity of the transgression could result in penalties even more detrimental to one's course grade, up to and including outright failure of the class altogether. 
+
+See section \@ref(ReportingViolations) above for more information on the procedures we take once cheating (plagiarism) has been identified.  
+
+## University Policies 
+
+## Vaccines and Face-coverings Policy
+
+To help protect Aggieland and stop the spread of COVID-19, Texas A&M University urges students to be vaccinated and to wear masks in classrooms and all other academic facilities on campus, including labs. Doing so exemplifies the Aggie Core Values of respect, leadership, integrity, and selfless service by putting community concerns above individual preferences. COVID-19 vaccines and masking — regardless of vaccination status — have been shown to be safe and effective at reducing spread to others, infection, hospitalization, and death.
+
+<br/>
+
+### Attendance Policy
+
+The university views class attendance and participation as an individual student responsibility. Students are expected to attend class and to complete all assignments. 
+
+Please refer to [Student Rule 7](https://student-rules.tamu.edu/rule07/) in its entirety for information about excused absences, including definitions, and related documentation and timelines.
+
+<br/>
+
+### Makeup Work Policy
+
+Students will be excused from attending class on the day of a graded activity or when attendance contributes to a student’s grade, for the reasons stated in Student Rule 7, or other reason deemed appropriate by the instructor. 
+
+Please refer to [Student Rule 7](https://student-rules.tamu.edu/rule07/) in its entirety for information about makeup work, including definitions, and related documentation and timelines.
+
+Absences related to Title IX of the Education Amendments of 1972 may necessitate a period of more than 30 days for make-up work, and the time frame for make-up work should be agreed upon by the student and instructor” ([Student Rule 7, Section 7.4.1](https://student-rules.tamu.edu/rule07)).
+
+“The instructor is under no obligation to provide an opportunity for the student to make up work missed because of an unexcused absence” ([Student Rule 7, Section 7.4.2](https://student-rules.tamu.edu/rule07)).
+
+Students who request an excused absence are expected to uphold the Aggie Honor Code and Student Conduct Code. (See [Student Rule 24](https://student-rules.tamu.edu/rule24/).)
+
+<br/>
+
+### Academic Integrity Statement and Policy
+
+>An Aggie does not lie, cheat or steal, or tolerate those who do.
+
+“Texas A&M University students are responsible for authenticating all work submitted to an instructor. If asked, students must be able to produce proof that the item submitted is indeed the work of that student. Students must keep appropriate records at all times. The inability to authenticate one’s work, should the instructor request it, may be sufficient grounds to initiate an academic misconduct case” ([Section 20.1.2.3, Student Rule 20](https://aggiehonor.tamu.edu/Rules-and-Procedures/Rules/Honor-System-Rules)).
+
+You can learn more about the Aggie Honor System Office Rules and Procedures, academic integrity, and your rights and responsibilities at [aggiehonor.tamu.edu](aggiehonor.tamu.edu).
+
+NOTE: Faculty associated with the main campus in College Station should use this Academic Integrity Statement and Policy. Faculty not on the main campus should use the appropriate language and location at their site.
+
+<br/>
+
+### Americans with Disabilities Act (ADA) Policy
+
+Texas A&M University is committed to providing equitable access to learning opportunities for all students. If you experience barriers to your education due to a disability or think you may have a disability, please contact Disability Resources in the Student Services Building or at (979) 845-1637 or visit [disability.tamu.edu](https://disability.tamu.edu/). Disabilities may include, but are not limited to attentional, learning, mental health, sensory, physical, or chronic health conditions. All students are encouraged to discuss their disability related needs with Disability Resources and their instructors as soon as possible.
+
+<br/>
+
+### Title IX and Statement on Limits to Confidentiality
+
+Texas A&M University is committed to fostering a learning environment that is safe and productive for all. University policies and federal and state laws prohibit gender-based discrimination and sexual harassment, including sexual assault, sexual exploitation, domestic violence, dating violence, and stalking.
+
+With the exception of some medical and mental health providers, all university employees (including full and part-time faculty, staff, paid graduate assistants, student workers, etc.) are Mandatory Reporters and must report to the Title IX Office if the employee experiences, observes, or becomes aware of an incident that meets the following conditions (see [University Rule 08.01.01.M1](https://rules-saps.tamu.edu/PDFs/08.01.01.M1.pdf)):
+
+- The incident is reasonably believed to be discrimination or harassment. 
+-	The incident is alleged to have been committed by or against a person who, at the time of the incident, was (1) a student enrolled at the University or (2) an employee of the University. 
+
+Mandatory Reporters must file a report regardless of how the information comes to their attention – including but not limited to face-to-face conversations, a written class assignment or paper, class discussion, email, text, or social media post. Although Mandatory Reporters must file a report, in most instances, you will be able to control how the report is handled, including whether or not to pursue a formal investigation. The University’s goal is to make sure you are aware of the range of options available to you and to ensure access to the resources you need.
+
+Students wishing to discuss concerns in a confidential setting are encouraged to make an appointment with [Counseling and Psychological Services](https://caps.tamu.edu) (CAPS). 
+
+Students can learn more about filing a report, accessing supportive resources, and navigating the Title IX investigation and resolution process on the University’s [Title IX webpage](https://titleix.tamu.edu/).
+
+NOTE: Faculty associated with the main campus in College Station should use this Title IX and Statement on Limits of Liability. Faculty not on the main campus should use the appropriate language and location at their site.
+
+<br/>
+
+### Statement on Mental Health and Wellness
+
+Texas A&M University recognizes that mental health and wellness are critical factors that influence a student’s academic success and overall well-being. Students are encouraged to engage in proper self-care by utilizing the resources and services available from Counseling & Psychological Services (CAPS). Students who need someone to talk to can call the TAMU Helpline (979-845-2700) from 4:00 p.m. to 8:00 a.m. weekdays and 24 hours on weekends. 24-hour emergency help is also available through the National Suicide Prevention Hotline (800-273-8255) or at [suicidepreventionlifeline.org](https://suicidepreventionlifeline.org/). 
+
+<br/>
+
+## College/Department Policies 
+
+<br/>
+
+### Limits to Confidentiality
+
+Texas A&M University and the Department of Psychological and Brain Sciences are committed to fostering a learning environment that is safe and productive for all. University policies and federal and state laws provide guidance for achieving such an environment. Although class materials are generally considered confidential pursuant to student record policies and laws, University employees—including instructors—cannot maintain confidentiality when it conflicts with their responsibility to report certain issues that jeopardize the health and safety of our community. As the instructor, we must report the following information to other University offices if you share it with me, even if you do not want the disclosed information to be shared:  
+
+- Allegations of sexual assault, sexual discrimination, or sexual harassment when they involve TAMU students, faculty, or staff  
+- Credible threats of harm to oneself, to others, or to university property  
+    
+These reports may trigger contact from a campus official who will want to talk with you about the incident that you have shared. In many cases, it will be your decision whether or not you wish to speak with that individual.
+
+If you would like to talk about these events in a more confidential setting, you are encouraged to make an appointment with the [Student Counseling Service](https://scs.tamu.edu/)
+Students can report concerning, non-emergency behavior at [Tell Somebody](http://tellsomebody.tamu.edu).
+
+<br/>
+
+### Respect for Diversity
+
+To make this environment comfortable for everyone, please remember that there are many students with different experiences and needs in one room. This class does not tolerate remarks that are sexist, racist, homophobic, or otherwise ridicule people.
+
+**Respectful environment**: There are a number of topics during the semester that can make some people uncomfortable. To make this environment comfortable for everyone, please remember that there are many students with different experiences and needs in one room and these diverse experiences and backgrounds are not always obvious to the casual observer. Whereas it is 100% OK to disagree with someone, you must state your disagreements about the issue (and not the other person) and in a way that is respectful (i.e., does not belittle people or groups). This class does not tolerate remarks that are sexist, racist, homophobic, or otherwise ridicule people.
