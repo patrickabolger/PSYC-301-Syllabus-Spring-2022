@@ -1,14 +1,14 @@
-Number	Problem Name	Difficulty	Points
-1	Central Tendency	Easier	5
-2	Variation	Easier	5
-3	z-scores	Easier	5
-4	Boxplots	Easier	5
-5	Standard Error & Confidence Intervals	Harder	8
-6	Area Under Curve	Hardest	12
-7	Chi-Square	Harder	8
-8	Independent-samples *t*-test	Harder	8
-9	ANOVA table	Harder	8
-10	ANOVA Sums of Squares	Hardest	12
-11	Correlation	Harder	8
-12	Simple Regression	Harder	8
-13	paired-samples *t*-test	Harder	8
+Number	Problem Name	Available	Due	Difficulty	Points
+1	Central Tendency	28 Jan  	4 Feb	Easier	5
+2	Variation	4 Feb	18 Feb	Easier	5
+3	z-scores	4 Feb  	18 Feb	Easier	5
+4	Boxplots	11 Feb	25 Feb	Easier	5
+5	Standard Error & Confidence Intervals	18 Feb	11 Mar	Harder	8
+6	Area Under Curve	18 Feb 	11 Mar	Hardest	12
+7	Chi-Square	4 Mar	25 Mar	Harder	8
+8	Independent-samples *t*-test	11 Mar	1 Apr	Harder	8
+9	ANOVA table	25 Mar	8 Apr	Harder	8
+10	ANOVA Sums of Squares	25 Mar	8 Feb	Hardest	12
+11	Correlation	1 Apr	15 Apr	Harder	8
+12	Simple Regression	8 Apr	22 Apr	Harder	8
+13	paired-samples *t*-test	15 Apr 	29 Apr	Harder	8

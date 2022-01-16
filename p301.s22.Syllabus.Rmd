@@ -1,9 +1,8 @@
 ---
 title: |
   ![](images/TAM-PrimaryMarkA.png){width=75%}  
-  Syllabus for PSYC 301:
-subtitle: |
- Elementary Statistics for Psychology (Spring, 2022)
+  Syllabus for PSYC 301: Elementary Statistics for Psychology (Spring, 2022)
+ 
 knit: (function(input_file, encoding) {
   out_dir <- 'docs';
   rmarkdown::render(input_file,
@@ -12,7 +11,7 @@ knit: (function(input_file, encoding) {
     }
   )
 output: 
-  rmdformats::downcute:
+  rmdformats::readthedown:
     use_bookdown: true
 ---
 
@@ -37,43 +36,56 @@ pacman::p_load(dplyr, knitr, magrittr, kableExtra, readr, tibble, tidyr, pander)
 ############## Main Class #################3
 
 ## Exams 
-A <- 75 # Points per exam
-B <- 4 # Number of Exams
+AA <- 75 # Points per exam
+BB <- 4 # Number of Exams
 
 ## Homework
-U <- 5 # Points per easier HW
-V <- 4 # Number of easier HWs
-W <- 8 #Points per harder HW
-X <- 7 # Number of harder HWs
-Y <- 12 # Points per hardest HW
-Z <- 2 # Number per hardest HW
+CC <- 5 # Points per easier HW
+DD <- 4 # Number of easier HWs
+EE <- 8 #Points per harder HW
+FF <- 7 # Number of harder HWs
+GG <- 12 # Points per hardest HW
+HH <- 2 # Number per hardest HW
+
+## Perusall readings in main class
+II <- 4 # Points per reading in Perusall in main class
+JJ <- 14 # Number of Perusall readings in main class
 
 ############## Lab ##################
 
+## Perusall video watchings
+KK <- 4 # Points per video watching in Perusall
+LL <- 11 # Number of Perusall video watchings
+
 ## Attendance
-C <-  5 # Points per attendance
-D <- 13 # Number of lab meetings
+MM <-  5 # Points per attendance
+NN <- 13 # Number of lab meetings
 
 ## Support tasks
-E <- 2 # Points per support task
-G <- 8 # Number of support Tasks
+OO <- 12 # Points per support task
+PP <- 8 # Number of support Tasks
 
 ## Rough Drafts
-H <- 25 # Points per Rough Drafts (Peerceptiv)
-I <-  4 # Number of Rough Drafts
+QQ <- 30 # Points per Rough Drafts (Peerceptiv)
+RR <-  4 # Number of Rough Drafts
 
 ## Final Dfts
-J <- 44 # Points for Final Draft 1 (Turnitin)
-K <- 55 # Points for Final Draft 2 (Turnitin)
-L <- 45 # Points for Final Draft 3 (Turnitin)
-M <- 75 # Points for Final Draft 4 (Turnitin)
+SS <- 44 # Points for Final Draft 1 (Turnitin)
+TT <- 55 # Points for Final Draft 2 (Turnitin)
+UU <- 45 # Points for Final Draft 3 (Turnitin)
+VV <- 75 # Points for Final Draft 4 (Turnitin)
 
 ## POINT TOTALS
-N <- sum((A*B),(C*D),(E*G),(H*I),J,K,L,M,(U*V),(W*X),(Y*Z)) # For the entire class
-O <- sum(      (C*D),(E*G),(H*I),J,K,L,M) # For the lab only
-P <- sum(            (E*G),(H*I),J,K,L,M) # For the research project Only
-Q <- sum(                  (H*I),J,K,L,M) # For all the drafts (rough & final) only
-R <- sum(                        J,K,L,M) # For the final drafts only
+### For the entire class
+AAA <- sum((AA*BB),(CC*DD),(EE*FF),(GG*HH),(II*JJ),(KK*LL),(MM*NN),(OO*PP),(QQ*RR),SS,TT,UU,VV)
+##3 For the lab only
+BBB <- sum(                                        (KK*LL),(MM*NN),(OO*PP),(QQ*RR),SS,TT,UU,VV) 
+### For the research project Only
+CCC <- sum(                                                        (OO*PP),(QQ*RR),SS,TT,UU,VV)
+# For all the drafts (rough & final) only
+DDD <- sum(                                                                (QQ*RR),SS,TT,UU,VV) 
+# For the final drafts only
+EEE <- sum(                                                                        SS,TT,UU,VV)
 
 ```
 
@@ -83,81 +95,107 @@ R <- sum(                        J,K,L,M) # For the final drafts only
 ## 
 ## THESE NEEED TO CHANGE, I THINK
 ## 
-Date_Exam1_Start <- "Thursday, 16 September"
-Time_Exam1_Start <- "2 pm"
-Date_Exam1_Finish <- "Tuesday, 21 September"
-Time_Exam1_Finish <- "9:35 am"
+Date_Exam1_Start <- "Friday, 04 February"
+Time_Exam1_Start <- "5:00 pm"
+Date_Exam1_Finish <- "Wednesday, 09 February"
+Time_Exam1_Finish <- "11:59 pm"
 
 ## Exam 2
-Date_Exam2_Start <- "Thursday, 7 October"
-Time_Exam2_Start <- "2 pm"
-Date_Exam2_Finish <- "Tuesday, 12 October"
-Time_Exam2_Finish <- "9:35 am"
+Date_Exam2_Start <- "Friday, 25 February"
+Time_Exam2_Start <- "5:00 pm"
+Date_Exam2_Finish <- "Wednesday, 2 March"
+Time_Exam2_Finish <- "11:59 pm"
 
 ## Exam 3
-Date_Exam3_Start <- "Thursday, 11 November"
-Time_Exam3_Start <- "2 pm"
-Date_Exam3_Finish <- "Tuesday, 16 November"
-Time_Exam3_Finish <- "9:35 am"
+Date_Exam3_Start <- "Friday, 8 April"
+Time_Exam3_Start <- "5:00 pm"
+Date_Exam3_Finish <- "Wednedsay, 13 April"
+Time_Exam3_Finish <- "11:59 pm"
 
 ## Final Exam
-Date_Final_Start <- "Monday, 10 December"
+Date_Final_Start <- "Thursday, 5 May"
 Time_Final_Start <- "8:00 am"
-Date_Final_Finish <- "Wednesday, 15 December"
+Date_Final_Finish <- "Tuesday, 10 May"
 Time_Final_Finish <- "4:30 pm"
 
 # Homework problems
 Name_HW01 <- "Central Tendency"
-Date_HW01_Start <- "Monday, 9 September"
-Time_HW01_Start <- "12 am"
+Date_HW01_Start <- "Friday, 28 January"
+Time_HW01_Start <- "11:59 pm"
+Date_HW01_Due <- "Friday, 4 February"
+Time_HW01_Due <- "11:59 pm"
 
 Name_HW02 <- "Variation"
-Date_HW02_Start <- "Monday, 13 September"
-Time_HW02_Start <- "12 am"
+Date_HW02_Start <- "Friday, 4 February"
+Time_HW02_Start <- "11:59 pm"
+Date_HW02_Due <- "Friday, 18 February"
+Time_HW02_Due <- "11:59 pm"
 
 Name_HW03 <- "z-scores"
-Date_HW03_Start <- "Monday, 13 September"
-Time_HW03_Start <- "12 am"
+Date_HW03_Start <- "Friday, 4 February"
+Time_HW03_Start <- "11:59 pm"
+Date_HW03_Due <- "Friday, 18 February"
+Time_HW03_Due <- "11:59 pm"
 
 Name_HW04 <- "Boxplots"
-Date_HW04_Start <- "Monday, 20 September"
-Time_HW04_Start <- "12 am"
+Date_HW04_Start <- "Friday, 11 February"
+Time_HW04_Start <- "11:59 pm"
+Date_HW04_Due <- "Friday, 25 February"
+Time_HW04_Due <- "11:59 pm"
 
 Name_HW05 <- "Standard Error and Confidence Intervals"
-Date_HW05_Start <- "Monday, 27 September"
-Time_HW05_Start <- "12 am"
+Date_HW05_Start <- "Friday, 18 February"
+Time_HW05_Start <- "11:59 pm"
+Date_HW05_Due <- "Friday, 11 March"
+Time_HW05_Due <- "11:59 pm"
 
 Name_HW06 <- "Area Under Curve"
-Date_HW06_Start <- "Monday, 27 September"
-Time_HW06_Start <- "12 am"
+Date_HW06_Start <- "Friday, 18 February"
+Time_HW06_Start <- "11:59 pm"
+Date_HW06_Due <- "Friday, 11 March"
+Time_HW06_Due <- "11:59 pm"
 
 Name_HW07 <- "Chi-square"
-Date_HW07_Start <- "Monday, 11 October"
-Time_HW07_Start <- "12 am"
+Date_HW07_Start <- "Friday, 4 March"
+Time_HW07_Start <- "11:59 pm"
+Date_HW07_Due <- "Friday, 25 March"
+Time_HW07_Due <- "11:59 pm"
 
 Name_HW08 <- "Independent-samples t-test"
-Date_HW08_Start <- "Monday, 18 October"
-Time_HW08_Start <- "12 am"
+Date_HW08_Start <- "Friday, 11 March"
+Time_HW08_Start <- "11:59 pm"
+Date_HW08_Due <- "Friday, 1 April"
+Time_HW08_Due <- "11:59 pm"
 
 Name_HW09 <- "ANOVA table"
-Date_HW09_Start <- "Monday, 25 October"
-Time_HW09_Start <- "12 am"
+Date_HW09_Start <- "Friday, 25 March"
+Time_HW09_Start <- "11:59 pm"
+Date_HW09_Due <- "Friday, 8 April"
+Time_HW09_Due <- "11:59 pm"
 
 Name_HW10 <- "ANOVA Sums of Squares"
-Date_HW10_Start <- "Monday, 25 October"
-Time_HW10_Start <- "12 am"
+Date_HW10_Start <- "Friday, 25 March"
+Time_HW10_Start <- "11:59 pm"
+Date_HW10_Due <- "Monday, 8 April"
+Time_HW10_Due <- "11:59 pm"
 
 Name_HW11 <- "Correlation"
-Date_HW11_Start <- "Monday, 1 November"
-Time_HW11_Start <- "12 am"
+Date_HW11_Start <- "Friday, 1 April"
+Time_HW11_Start <- "11:59 pm"
+Date_HW11_Due <- "Friday, 15 April"
+Time_HW11_Due <- "11:59 pm"
 
 Name_HW12 <- "Simple regression"
-Date_HW12_Start <- "Monday, 8 November"
-Time_HW12_Start <- "12 am"
+Date_HW12_Start <- "Friday, 8 April"
+Time_HW12_Start <- "11:59 pm"
+Date_HW12_Due <- "Friday, 22 April"
+Time_HW12_Due <- "11:59 pm"
 
 Name_HW13 <- "Paired-samples t-test"
-Date_HW13_Start <- "Monday, 15 November"
-Time_HW13_Start <- "12 am"
+Date_HW13_Start <- "Friday, 15 April"
+Time_HW13_Start <- "11:59 pm"
+Date_HW13_Due <- "Friday, 29 April"
+Time_HW13_Due <- "11:59 pm"
 
 Date_HW_all_Due <- "Wednesday, 8 December"
 Time_HW_all_Due <- "11:59 pm"
@@ -165,43 +203,43 @@ Time_HW_all_Due <- "11:59 pm"
 # General due time
 
 # Support Tasks
-Name_SupportTask1 <- "Topic Brainstorm"
-Date_SupportTask1 <- "Saturday, 4 September"
-Time_SupportTask1 <- "5 pm"
+Name_ST1 <- "Topic Brainstorm"
+Date_ST1 <- "Saturday, 22 January"
+Time_ST1 <- "5 pm"
 
-Name_SupportTask2 <- "Finalize Study Designs"
-Date_SupportTask2 <- "Friday, 17 September at 11:59 pm"
+Name_ST2 <- "Survey on Study Design"
+Date_ST2 <- "Friday, 4 February at 11:59 pm"
 
-Name_SupportTask3 <- "Full Dataset for Semester"
-Date_SupportTask3 <- "Friday, 1 October at 11:59 pm"
+Name_ST3 <- "Full Dataset for Semester"
+Date_ST3 <- "Friday, 18 February at 11:59 pm"
 
-Name_SupportTask4 <- "Statistical Output for Method section"
-Date_SupportTask4 <- "Friday, 8 October at 11:59 pm"
+Name_ST4 <- "Statistical Output for Method section"
+Date_ST4 <- "Friday, 25 February at 11:59 pm"
 
-Name_SupportTask5 <- "Statistical Output for t-test"
-Date_SupportTask5 <- "Friday, 22 October at 11:59 pm"
+Name_ST5 <- "Statistical Output for t-test"
+Date_ST5 <- "Friday, 11 March at 11:59 pm"
 
-Name_SupportTask6 <- "Statistical Output for ANOVA"
-Date_SupportTask6 <- "Friday, 29 October at 11:59 pm"
+Name_ST6 <- "Statistical Output for ANOVA"
+Date_ST6 <- "Friday, 25 March at 11:59 pm"
 
-Name_SupportTask7 <- "Statistical Output for Correlation"
-Date_SupportTask7 <- "Friday, 12 November at 11:59 pm"
+Name_ST7 <- "Statistical Output for Correlation"
+Date_ST7 <- "Friday, 8 April at 11:59 pm"
 
-Name_SupportTask8 <- "Statistical Output for Regression"
-Date_SupportTask8 <- "Friday, 12 November at 11:59 pm"
+Name_ST8 <- "Statistical Output for Regression"
+Date_ST8 <- "Friday, 8 April at 11:59 pm"
 
 # Rough Drafts
-Date_RoughDraft1 <- "by 10:00 am, the day of your lab, 20/22 September"
-Date_RoughDraft2 <- "by 10:00 am, the day of your lab, 11/13 October"
-Date_RoughDraft3 <- "by 10:00 am, the day of your lab, 1/3 November"
-Date_RoughDraft4 <- "by 11:59 pm, 19 November"
+Date_RoughDraft1 <- "by 9:00 am, the day of your lab, 8 or 9 February"
+Date_RoughDraft2 <- "by 9:00 am, the day of your lab, 1 or 2 March"
+Date_RoughDraft3 <- "by 9:00 am, the day of your lab, 29 or 30 March"
+Date_RoughDraft4 <- "by 9:00 am, the day of your lab, 19 or 20 April"
 
 #### CHANGE THESE DATES TO PUT TIME BETWEEN ROUGH DRAFT###
 # Final Drafts
-Date_FinalDraft1 <- "Before your own lab begins, 4 or 6 October"
-Date_FinalDraft2 <- "Before your own lab begins, 25 or 27 October"
-Date_FinalDraft3 <- "Before your own lab begins, 15 or 17 November"
-Date_FinalDraft4 <- "8 December by 11:59 pm"
+Date_FinalDraft1 <- "by 9:00 am, the day of your lab, 22 or 23 February"
+Date_FinalDraft2 <- "by 9:00 am, the day of your lab, 22 or 23 March"
+Date_FinalDraft3 <- "by 9:00 am, the day of your lab, 12 or 13 April"
+Date_FinalDraft4 <- "Tuesday, 3 May by 11:59 pm"
 
 ```
 
@@ -214,17 +252,18 @@ Date_FinalDraft4 <- "8 December by 11:59 pm"
 
 ```{r Import_CourseInfo}
 
-CourseInfo <- read_tsv("tables/CourseInfo.tsv", na="") 
+CourseInfo <- read_tsv("tables/CourseInfo.tsv", na="NA") 
 
 ```
 
 
 ```{r CourseInfoHtml, eval=T}
 
-CourseInfo2 <- CourseInfo %>% select(3:7)
-
-CourseInfo2 %>%
-  kbl(caption = "Section Information for PSYC 301, both taught by Dr. Patrick Bolger") %>%
+CourseInfo %>%
+  select(3:7) %>%
+  kbl(caption = "Section Information for PSYC 301") %>%
+  pack_rows("Dr. Patrick Bolger", 1, 1, background = "#D6D3C4") %>%
+  pack_rows("Dr. Yumiko Mochinushi", 2, 2, background = "#D6D3C4") %>%
   row_spec(0:0, bold = T, color = "white", background = "#500000") %>%
   kable_styling(bootstrap_options = "responsive", font_size=14, full_width = F, position = "left")
 
@@ -244,28 +283,43 @@ CourseInfo2 %>%
 
 ```{r Import_PeopleInfo}
 
-PeopleInfo <- read_tsv("tables/PeopleInfo.tsv", na="") 
+PeopleInfo <- read_tsv("tables/PeopleInfo.tsv", na="NA") 
 
 ```
 
-```{r PeopleInfoHtml, eval=T}
+```{r PeopleInfo2Html, eval=T}
 
 # Removed headers unnecessary in html table
-PeopleInfo2 <- PeopleInfo %>% select(1,4:7)
+PeopleInfo2 <- PeopleInfo %>% select(1:7) %>% filter(!row_number() %in% c(7:15))
 
 PeopleInfo2 %>% 
-  kbl(caption = "People") %>%
+  kbl(caption = "People in Sections 902-905") %>%
   pack_rows("Main Instructor", 1, 1, background = "#D6D3C4") %>%
-  pack_rows("Lab TAs for Section 989, Mondays, 10am-12pm, Milner 202", 2, 3, background = "#D6D3C4") %>%
-  pack_rows("Lab TA for Section 990, Mondays, 12-2pm, Milner 202", 4, 4, background = "#D6D3C4") %>%
-  pack_rows("Lab TA for Section 991, Mondays, 2-4pm, Milner 202", 5, 5, background = "#D6D3C4") %>%
-  pack_rows("Lab TAs for Section 992, Mondays, 4-6pm, Milner 202", 6, 7, background = "#D6D3C4") %>%
-  pack_rows("Lab TA for Section 994, Wednesdays, 10-12pm, Milner 202", 8, 8, background = "#D6D3C4") %>%
-  pack_rows("Lab TAs for Section 995, Wednesdays, 12-2pm, Milner 202", 9, 10, background = "#D6D3C4") %>%
-  pack_rows("Lab TA for Section 996, Wednesdays, 2-4pm, Milner 202", 11, 11, background = "#D6D3C4") %>%
-  pack_rows("Lab TA for Section 998, Wednesdays, 4-6pm, Milner 202", 12, 12, background = "#D6D3C4") %>%
-  pack_rows("Undergraduate Teaching Scholar for Sections 989-992", 13, 13, background = "#D6D3C4") %>%
-  pack_rows("Undergraduate Teaching Scholar for Sections 994-996; 998", 14, 14, background = "#D6D3C4") %>%
+  pack_rows("Lab TA for Section 902, Tuesdays, 10am-12pm, Milner 202", 2, 2, background = "#D6D3C4") %>%
+  pack_rows("Lab TA for Section 903, Tuesdays, 12-2pm, Milner 202", 3, 3, background = "#D6D3C4") %>%
+  pack_rows("Lab TA for Section 904, Tuesdays, 2-4pm, Milner 202", 4, 4, background = "#D6D3C4") %>%
+  pack_rows("Lab TA for Section 905, Tuesdays, 4-6pm, Milner 202", 5, 5, background = "#D6D3C4") %>%
+  pack_rows("Undergraduate Teaching Scholar (all sections)", 6, 6, background = "#D6D3C4") %>%
+  row_spec(0:0, bold = T, color = "white", background = "#500000") %>%
+  kable_styling(bootstrap_options = "responsive", font_size=14, full_width = F, position = "left")
+
+```
+
+<br/>
+
+```{r PeopleInfo3Html, eval=T}
+
+# Removed headers unnecessary in html table
+PeopleInfo3 <- PeopleInfo %>% select(1:7) %>% filter(!row_number() %in% c(1:6))
+
+PeopleInfo3 %>% 
+  kbl(caption = "People in Sections 912-915") %>%
+  pack_rows("Main Instructor", 1, 1, background = "#D6D3C4") %>%
+  pack_rows("Lab TA for Section 912, Wednesdays, 10am-12pm, Milner 202", 2, 2, background = "#D6D3C4") %>%
+  pack_rows("Lab TA for Section 913, Wednesdays, 12-2pm, Milner 202", 3, 3, background = "#D6D3C4") %>%
+  pack_rows("Lab TA for Section 914, Wednesdays, 2-4pm, Milner 202", 4, 4, background = "#D6D3C4") %>%
+  pack_rows("Lab TAs for Section 915, Wednesdays, 4-6pm, Milner 202", 5, 6, background = "#D6D3C4") %>%
+  pack_rows("Undergraduate Teaching Scholars (all sections)", 7, 8, background = "#D6D3C4") %>%
   row_spec(0:0, bold = T, color = "white", background = "#500000") %>%
   kable_styling(bootstrap_options = "responsive", font_size=14, full_width = F, position = "left")
 
@@ -282,7 +336,7 @@ pandoc.table(PeopleInfo, style = "multiline", split.table = Inf, missing = "", c
 
 $\dagger$ Strikethrough font means that the office location is for documentation purposes only. Student hours are online only.
 
-$\dagger\dagger$ Exceptions are during the week of 6-10 September, when Dr. Bolger will hold office hours on Monday, 6 September, from 10am-12pm, and during the week of 4-8 October, when he will also hold office hours on Monday, 4 October, from 10am-12pm.
+$\ddagger$ [Undergraduate Teaching Scholar](https://liberalarts.tamu.edu/psychology/undergraduate/academics/teaching-scholars-program/)
 
 # Details 
 
@@ -315,11 +369,11 @@ Meetings for the main class are remote and synchronous.
 
 This course is a [university designated “W” course](http://writingcenter.tamu.edu/Students/W-C-Courses). Although statistics may not seem like the most obvious class to be writing-intensive, effective communication about statistical analyses and the interpretation of results is a crucial part of psychological science. Writing well is a set of skills that can be developed with deliberate practice. You will have the chance to develop such skills in this course.
 
-Accordingly, since it is a 4-unit "W" course, at least 25% of your grade must be based on writing. In this class, it is `r paste0(round((R/N)*100,0),"%")` ***(`r R` points out of `r N`)***. 
+Accordingly, since it is a 4-unit "W" course, at least 25% of your grade must be based on writing. In this class, there are both rough and final drafts. Together, they comprise `r paste0(round((DDD/AAA)*100,0),"%")` of your total grade, or ***`r DDD` points out of `r AAA`***. 
 
-Additionally, as per the rules of the [Department of Psychological and Brain Sciences](https://liberalarts.tamu.edu/psychology/), you must pass the writing portion of the course with at least 60% of the points on the writing assignments. For this class, this means that **your total summed score across all final drafts of papers must reach at least `r round(R*.6,0)` out of `r R` points.** 
+Additionally, as per the rules of the [Department of Psychological and Brain Sciences](https://liberalarts.tamu.edu/psychology/), you must pass the writing portion of the course with at least 60% of the points on the writing assignments (59.5% in this class rounds up to 60%). For this class, this means that **your total summed score across all FINAL drafts of papers must reach at least `r round(EEE*.595,0)` out of `r EEE` points.** 
 
-**Failure to obtain `r round(R*.6,0)` points for the four final drats will result in a failure to pass _PSYC 301_ altogether, irrespective of your cumulative score out of `r N` for the entire class (main class + lab).**
+**Failure to obtain `r round(EEE*.595,0)` points for the four final drafts will result in a failure to pass _PSYC 301_ altogether, irrespective of your cumulative score out of `r AAA` for the entire class (main class + lab).**
 
 Two additional rules: 
 
@@ -372,7 +426,7 @@ Again, these will be carried out in groups of about 4-6 students, which are in t
 
 With these groups, you will also engage in further activities that will help you achieve a deeper understanding of the topics covered in lecture. 
 
-Support tasks, writing assignments, and research-group lab tasks are worth just under `r paste0(round((O/N)*100,0),"%")` of your total grade(or `r paste0(O,"/",N)`). 
+Support tasks, writing assignments, and research-group lab tasks are worth just under `r paste0(round((BBB/AAA)*100,0),"%")` of your total grade(or `r paste0(BBB,"/",AAA)`). 
 
 Thus, actively participating in lab is important for success in this course.
 
@@ -457,7 +511,7 @@ You will work in teams to design a study and collect data. Almost all research p
 
 ### Overview
 
-There will be four exams (the 4th being the ***cumulative*** final exam), each worth `r A` points (summing to `r A*B` points, or `r paste0(round(((A*B)/N)*100,0),"%")` of your total grade). 
+There will be four exams (the 4th being the ***cumulative*** final exam), each worth `r AA` points (summing to `r AA*BB` points, or `r paste0(round(((AA*BB)/AAA)*100,0),"%")` of your total grade). 
 
 Exams will include calculations and multiple-choice questions. Exams 1-3 (but not the final) will be explicitly focused on the topics covered in just that section of the course. ***But note again that the final exam is cumulative***.
 
@@ -480,18 +534,9 @@ You can look down to write down answers on a blank piece of paper. Otherwise, yo
 
 The good news is that the exams in this class are now more of a *formative* nature instead of *summative* nature. This means that the tests are more focused on helping you learn rather than assessing your knowledge, per se.
 
-The translation for you is that in this course, you can re-take each exam up to 3 times within the exam date-interval, starting on the calendar day ***after*** your 1st attempt (if you request it on the Google Form that will be provided). We will accept your highest score of the 1-to-3 attempts on each exam that you take/re-take.
+The translation for you is that in this course, you can re-take each exam up to 3 times within the exam date-interval. **Note however that there is a 12-hour waiting period between each attempt, so if you finish your first attempt 24 hours before the deadline, you will only get 2 attempts, and if you finish your first attempt 12 hours before the deadline, you will only get one attempt.** We will accept your highest score of the 1-to-3 attempts on each exam that you take/re-take.
 
 **However**, there are some ground rules to this process. Details are provided below:  
-
-
-1. The earliest you can re-take any exam is the next calendar day.  
-
-2. To re-take the exam, you will need to indicate your intention on a *Google Forms* survey that we will provide. From there, we will set things up so that you can re-take the exam starting the calendar day after you last attempted it. Do this as early as possible after you take the exam since we will have 24 hours to respond to your survey response.  
-
-3. We will take your **highest** score as your final score for that exam      
-Remember, if you do poorly on any exam, you just take it again. These are a little more like formative exams, and less like summative exams. It works in your favor to study between attempts, however. We hope you feel that the benefit of multiple attempts is worth the extra trouble.
-
 
 ### Key Exam Dates {#ExamReTakesSummarized}
 
@@ -516,11 +561,9 @@ There are more exam guidelines, but since the exams will be online, we have incl
 
 ## Homework Problems in Main Class
 
-The homework problems$^{\dagger\dagger}$ assigned in the main class involve calculations. They will appear online in during the times indicated in the table below and on the course schedule (section \@ref(MainClassSchedule)), and you have until the end of the semester to finish them (`r Date_HW_all_Due` at `r Time_HW_all_Due`). However, you probably do not want to wait that long. They can be quite involved, and will probably take you between 1/2 hour and an hour to complete (especially the more difficult ones).
+The homework problems$^{\dagger\dagger}$ assigned in the main class involve calculations. In the table below, you can see when will appear online, and when they are due. These are all Fridays, and the time that they are due is always 11:59 pm. These are also listed on the course schedule (section \@ref(MainClassSchedule)). Note that they can be quite involved, and will probably take you between 1/2 hour and an hour to complete (especially the more difficult ones).
 
-You also have to get ***all*** the answers right. This can be a little frustrating. If you don't get them all right on any given attempt, you just start over (but you will get a different data set every time you re-try the problem). You have an unlimited number of attempts.
-
-These attempts ***do*** get recorded using the *Respondus Lockdown Browser*. This is just to deter having someone else do the problem for you, or help you do it. But it is not an exam since there are unlimited attempts.
+You also have to get ***all*** the answers right. This can be a little frustrating. If you don't get them all right on any given attempt, you just start over (but you will get a different data set every time you re-try the problem). You have an unlimited number of attempts in that time period, except for the fact that you can only attempt them once per day.
 
 There are thirteen of them. See below.
 
@@ -533,16 +576,6 @@ HWProbs <- read_tsv("tables/HWProbs.tsv")
 ```{r diplayHWProbs, eval=T}
 HWProbs %>%
 kbl(caption = 'Homework Problems by Date') %>%
-  pack_rows("Monday, 6 September at 12 am", 1, 1, background = "#D6D3C4") %>%
-  pack_rows("Monday, 13 September at 12 am", 2, 3, background = "#D6D3C4") %>%
-  pack_rows("Monday, 20 September", 4, 4, background = "#D6D3C4") %>%
-  pack_rows("Monday, 27 September", 5, 6, background = "#D6D3C4") %>%
-  pack_rows("Monday, 11 October", 7, 7, background = "#D6D3C4") %>%
-  pack_rows("Monday, 18 October", 8, 8, background = "#D6D3C4") %>%
-  pack_rows("Monday, 25 October", 9, 10, background = "#D6D3C4") %>%
-  pack_rows("Monday, 1 November", 11, 11, background = "#D6D3C4") %>%
-  pack_rows("Monday, 8 November", 12, 12, background = "#D6D3C4") %>%
-  pack_rows("Monday, 15 November", 13, 13, background = "#D6D3C4") %>%
   kable_styling(bootstrap_options = "responsive", font_size = 11, full_width = F, position = "left") %>%
   row_spec(0:0, bold = T, color = "white", background = "#500000") %>%
   footnote(general = c("All homework together sum to 100 points"))
@@ -561,7 +594,7 @@ Otherwise, there is no extra credit in this course (though the formative exams a
 
 Briefly, what you learn as theory in the main class, you carry out in the lab portion of the course.
 
-There are `r O` points possible in the lab, the majority of which is carried by the research project (`r P`points), and a minority by weekly tasks carried out in lab (`r C*D` points).
+There are `r BBB` points possible in the lab, the majority of which is carried by the research project (`r CCC`points), and a minority by weekly tasks carried out in lab (`r MM*NN` points).
 
 <br/>
 
@@ -569,18 +602,22 @@ There are `r O` points possible in the lab, the majority of which is carried by 
 
 You will be carrying out a small research project in groups of about four students. This project is broken down into various parts.
 
-- There will be `r G` *Support Tasks* that you turn in as a group, each worth `r E` for a total of `r E*G` points. The support tasks revolve around research design, data collection, preparation, and analysis.  
+- There will be `r PP` *Support Tasks* that you turn in as a group, each worth `r OO` for a total of `r OO*PP` points. The support tasks revolve around research design, data collection, preparation, and analysis.  
 - You will also write somewhat simplified version of an [APA primary-research manuscript](https://tamu.libguides.com/apa). This will come in the form of four writing assignments, each of which in turn comprises a rough and a final draft.  
-  - The `r I` rough drafts are each worth `r H` points (`r H*I` total), and are peer-reviewed (by your classmates) through [Peerceptiv](https://www.peerceptiv.com/).  
+  - The `r RR` rough drafts are each worth `r QQ` points (`r QQ*RR` total), and are peer-reviewed (by your classmates) through [Peerceptiv](https://www.peerceptiv.com/).  
   - The final drafts have varying point values. See below.  
   
 <br/>
 
 #### Support Tasks 
 
-There are a total of `r G` *Support Tasks* Each is worth `r E` points, or `r E*G` points total. This amounts to `r paste0(round(((E*G)/N)*100,0),"%")` of the total final grade. 
+There are a total of `r PP` *Support Tasks* Each is worth `r OO` points, or `r OO*PP` points total. This amounts to `r paste0(round(((OO*PP)/AAA)*100,0),"%")` of the total final grade. 
 
-Support Task 1 is done by individual, and has an absolute deadline. Support Tasks 2-8 are done in groups, and groups lose a point for each day these tasks are late.
+The support tasks are done individually by student, even though many of them involve shared data sets (i.e., the data set generated by the research group you'll be in). 
+
+For each support task, there will be some extra questions you will need to answer. For support tasks 1-4, your answers will be on a separate form. For support tasks 5-8, you can answer the questions from within the .omv file in *jamovi*. 
+
+At no point should you be tempted to copy your group-mates' answers. You can talk to each other about the answers to the questions, but those answers must be in your own words.
 
 The are listed in order below.
 
@@ -588,13 +625,13 @@ The are listed in order below.
 
 ##### Brainstorm (1 task) 
 
-Students will brainstorm on possible topics through a survey provided by the main instructor. When this survey is completed, the instructor will assign `r E` points to those who completed the survey on time. This is due at the latest on `r Date_SupportTask1` at **5 pm**.
+Students will brainstorm on possible topics through a survey provided by the main instructor. When this survey is completed, the instructor will assign `r OO` points to those who completed the survey on time. This is due at the latest on `r Date_ST1` at **5 pm**.
 
 <br/>
 
 ##### Design (1 task)  
 
-Students will design their study in *Google Forms* in a *Google Drive* folder (specific folders shared out of the head instructor's *Google Drive* account).$^{\dagger\dagger}$ When the design is approved by the TA, the group members get `r E` points each. This is due `r Date_SupportTask2`.
+Students will design their study in *Google Forms* in a *Google Drive* folder (specific folders shared out of the head instructor's *Google Drive* account).$^{\dagger\dagger}$ When the study is approved by the TA (due `r Date_ST2`), each group member will get a survey to fill out, which is due at the same time `r Date_ST2`. Based on the answers to the survey, the group members get up to `r OO` points each. 
 
 $\dagger\dagger$This, and all subsequent tasks, will be associated with documents that are housed in a *Google Drive* folder that has been assigned to you in the head instructor's *Google Drive*. This is the only location considered official for your documents. Do not create any other *Google Drives* or use any other cloud-storage tools for this class.
 
@@ -602,23 +639,23 @@ $\dagger\dagger$This, and all subsequent tasks, will be associated with document
 
 ##### Data (1 task)  
 
-The groups will collect data. When that data collection is complete and the data have been saved into a *jamovi* file (.omv), uploaded into the same Google Drive folder, and approved by the TA, each member of the group will get `r E` points. This support task is due `r Date_SupportTask3`.
+The groups will collect data. When that data collection is complete and the data have been saved into a *jamovi* file (.omv), uploaded into the same *Google Drive* folder, and approved by the TA, each member of the group will also answer a survey. They will get up to `r OO` points for their answers. This support task is due `r Date_ST3`.
 
 <br/>
 
 ##### Outputs (5 tasks)  
 
-There are four writing assignments, but the last three require several data-analysis steps. Writing Assignment #2 requires one data analysis, and the last two writing assignments each require two data analyses. This sums to five outputs. Each of these statistical outputs will be added to the **same jamovi file** in the same Google Drive folder. Each group member will get `r E` points when each of these analyses is approved as adequate by the TA.
+There are four writing assignments, but the last three require several data-analysis steps. Writing Assignment #2 requires one data analysis, and the last two writing assignments each require two data analyses. This sums to five outputs, and five support tasks, accordingly. 
 
-***IMPORTANT NOTE: Please do not put multiple .omv files in the Google Drive Folder. This makes it difficult for the TA to determine which is the correct one.***
+For each of these last five support tasks, several questions will be given to students, and the students can answer each question within their own *jamovi* file itself. Students can get up to `r OO` points based on their answers, and the appropriateness of the respective analysis.
 
 Due dates:  
 
-- Support task 4 is due `r Date_SupportTask4`  
-- Support task 5 is due `r Date_SupportTask5`  
-- Support task 6 is due `r Date_SupportTask6` 
-- Support task 7 is due `r Date_SupportTask7`  
-- Support task 8 is due `r Date_SupportTask8`  
+- Support task 4 is due `r Date_ST4`  
+- Support task 5 is due `r Date_ST5`  
+- Support task 6 is due `r Date_ST6` 
+- Support task 7 is due `r Date_ST7`  
+- Support task 8 is due `r Date_ST8`  
 
 ---
 
@@ -626,19 +663,19 @@ Due dates:
 
 #### Writing Assignments 
 
-There are four writing assignments (divided into 4 rough and 4 final drafts) totaling `r Q` points out of `r N`, or `r paste0(round((Q/N)*100,0),"%")` of the class total.  
+There are four writing assignments (divided into 4 rough and 4 final drafts) totaling `r DDD` points out of `r AAA`, or `r paste0(round((DDD/AAA)*100,0),"%")` of the class total.  
 
 The four writing assignments correspond roughly to the sections typically found in a published original-research paper in Psychology (*IMRaD* -> *Introduction*, *Method*, *Results*, and *Discussion*) . They must also be formatted according to the [manuscript-formatting guidelines of the American Psychological Association](https://tamu.libguides.com/apa).  More details about this are in the [lab manual](https://patrickabolger.github.io/ElemStatsLabManual/) (Bolger, 2020).
 
-Recall that this is a "W" course. As such, you are required to submit both **rough drafts** (section \@ref(RoughDrafts)) and **final drafts** (section \@ref(FinalDrafts)) of writing assignments. See the respective sections below for more details on these assignment types.
+Recall that this is a *W* course. As such, you are required to submit both **rough drafts** (section \@ref(RoughDrafts)) and **final drafts** (section \@ref(FinalDrafts)) of writing assignments. See the respective sections below for more details on these assignment types.
         
 ##### Rough Drafts {#RoughDrafts}  
 
 ***Read this section carefully. It is the most complex part of this course.***
 
-There are `r I` rough drafts at `r H` points each, which is `r H*I` points total, or `r paste0(round(((H*I)/N)*100,0),"%")` of the class total.
+There are `r RR` rough drafts at `r QQ` points each, which is `r QQ*RR` points total, or `r paste0(round(((QQ*RR)/AAA)*100,0),"%")` of the class total.
 
-Each rough  of the `r I` rough drafts serves as a draft for your peers to review online. As one of these peer review-**ers**, **you** will review four other papers. You will then use the feedback from others to revise your own final draft. 
+Each rough  of the `r RR` rough drafts serves as a draft for your peers to review online. As one of these peer review-**ers**, **you** will review four other papers. You will then use the feedback from others to revise your own final draft. 
 
 ---
 
@@ -651,13 +688,11 @@ These rough drafts are due on the following dates and times:
 - Assignment #3 (rough draft): `r Date_RoughDraft3`  
 - Assignment #4 (rough draft): `r Date_RoughDraft4`  
 
-***Note that the last of this is due on `r Date_RoughDraft4` at 11:59 pm for ALL sections. This is so that we can finish the final peer review without encroaching on Reading Day (24 November), or the Thanksgiving Holiday (25-26 November).***
-
 Rough drafts must be turned in via [Peerceptiv](https://peerceptiv.zendesk.com/hc/en-us/articles/115004505373-What-is-Peerceptiv-) within *Canvas*. A special link is provided in *Canvas*. Note that you **must** access [Peerceptiv](https://www.peerceptiv.com/) assignments from within *Canvas* using that special link. **Do not** go to the [Peerceptiv](https://www.peerceptiv.com/) website to log in; this leads to problems. 
 
 Turning in your rough draft late leads to accruing penalties in two ways:
 
-1. Submitting your rough draft at any time ***between*** 10 am on the day of your lab and 10 am of the subsequent day is a submission during the "grace period". It will result in an automatic 50% off your peer-review grade (or `r round(H*.5,1)` our of `r H` points). If you upload your draft on time (or at least by the end of the grace period), the grading of the rough draft is done automatically through [Peerceptiv](https://www.peerceptiv.com/) as other students receive your draft and evaluate it.  
+1. Submitting your rough draft at any time ***between*** 10 am on the day of your lab and 10 am of the subsequent day is a submission during the "grace period". It will result in an automatic 50% off your peer-review grade (or `r round(QQ*.5,1)` our of `r QQ` points). If you upload your draft on time (or at least by the end of the grace period), the grading of the rough draft is done automatically through [Peerceptiv](https://www.peerceptiv.com/) as other students receive your draft and evaluate it.  
 
 2. If you miss the grace period, then you will need to submit your draft to a *Turnitin* assignment that will appear after the grace period (It will be named something like *Late Rough Draft of Writing Assignment #X*). Your TA will then evaluate the paper using the same rubric, and the main instructor will apply the appropriate late penalties. More information is below.  
 
@@ -669,12 +704,12 @@ $\dagger\dagger$ *Peerceptiv* does this because your paper probably will not get
 
 ##### Final Drafts {#FinalDrafts}  
 
-(varying points each [see bullet points below]; `r R` points total)  
+(varying points each [see bullet points below]; `r EEE` points total)  
 
-- Final Draft of Writing Assignment #1:  `r J`/`r R` points (or `r paste0(round((J/R)*100,0),"%")`)  
-- Final Draft of Writing Assignment #2:  `r K`/`r R` points (or `r paste0(round((K/R)*100,0),"%")`)  
-- Final Draft of Writing Assignment #3:  `r L`/`r R` points (or `r paste0(round((L/R)*100,0),"%")`)  
-- Final Draft of Writing Assignment #4:  `r M`/`r R` points (or `r paste0(round((M/R)*100,0),"%")`)  
+- Final Draft of Writing Assignment #1:  `r SS`/`r EEE` points (or `r paste0(round((SS/EEE)*100,0),"%")`)  
+- Final Draft of Writing Assignment #2:  `r TT`/`r EEE` points (or `r paste0(round((TT/EEE)*100,0),"%")`)  
+- Final Draft of Writing Assignment #3:  `r UU`/`r EEE` points (or `r paste0(round((UU/EEE)*100,0),"%")`)  
+- Final Draft of Writing Assignment #4:  `r VV`/`r EEE` points (or `r paste0(round((VV/EEE)*100,0),"%")`)  
 
 <br/>
 
@@ -698,7 +733,7 @@ Turning in your final draft late accrues penalties daily. Specifically, 10% will
 
 ##### The 60% requirement {#The60PctReq}
 
-**NOTE THAT IRRESPECTIVE OF YOUR GRADE FOR THE OVERALL CLASS, YOUR SCORE SUMMED ACROSS THE FINAL DRAFTS MUST REACH AT LEAST `r R*.595` OUT OF `r R` POINTS IN ORDER TO PASS _PSYC 301_ (60% of `r R`).** 
+**NOTE THAT IRRESPECTIVE OF YOUR GRADE FOR THE OVERALL CLASS, YOUR SCORE SUMMED ACROSS THE FINAL DRAFTS MUST REACH AT LEAST `r EEE*.595` OUT OF `r EEE` POINTS IN ORDER TO PASS _PSYC 301_ (60% of `r EEE`).** 
 
 Note that the points for the rough drafts do not count towards this particular "W" course requirement, but do indeed contribute substantially to your overall grade.
 
@@ -740,12 +775,10 @@ Also, ***do not bother your TAs with issues of plagiarism***. Their job is to id
 
 #### Helpful hints
 
-##### Confirming your uploads 
+##### Confirming your uploads in *Peerceptiv* 
 
-[Peerceptiv](https://www.peerceptiv.com/) and [Turnitin](https://www.turnitin.com/) have different ways of confirming your uploads:  
-
-1. For [Peerceptiv](https://www.peerceptiv.com/), make sure that it says “Document Submitted” (after submitting) [take a screenshot if you want proof]; if it doesn’t, **SUBMIT AGAIN**.  
-2. For [Turnitin](https://www.turnitin.com/), please make sure that you get an email confirmation from [Turnitin](https://www.turnitin.com/); if you don't, **SUBMIT AGAIN**.  
+For [Peerceptiv](https://www.peerceptiv.com/), make sure that it says “Document Submitted” (after submitting) [take a screenshot if you want proof]; if it doesn’t, **SUBMIT AGAIN**.  
+  
 
 ##### Cloud-based documents
 
@@ -763,7 +796,7 @@ In *Office 365*, it seems that you need to trust *Microsoft* to create versions 
 
 ### Attendance 
 
-(`r C*D` points [`r C` points $\times$ `r D` physical attendances], or `r paste0(round(((C*D)/N)*100,0),"%")` of the total grade)  
+(`r MM*NN` points [`r MM` points $\times$ `r NN` physical attendances], or `r paste0(round(((MM*NN)/AAA)*100,0),"%")` of the total grade)  
 
 Lab attendance is important for mastering material.
 
@@ -771,23 +804,25 @@ Lab attendance is important for mastering material.
 
 ## Breakdown by Assignment
 
-Final grades will be assigned at the end of the semester on the basis of the total number of points earned out of a possible `r N` points, based on the following components:  
+Final grades will be assigned at the end of the semester on the basis of the total number of points earned out of a possible `r AAA` points, based on the following components:  
 
 
 | Locus | Component | Points per Component | Number of Components | Total Points | % |
 |:----------:|:-------------:|:--------------------:|:--------------------:|:------------:|:----:|
-| Main Class | Exams | `r A` | `r B` | `r A*B` | `r paste0(round(((A*B)/N)*100,0),"%")` |
-| Main Class | Easier HW Problems | `r U` | `r V` | `r U*V` | `r paste0(round(((U*V)/N)*100,0),"%")` |
-| Main Class | Harder HW Problems | `r W` | `r X` | `r W*X` | `r paste0(round(((W*X)/N)*100,0),"%")` |
-| Main Class | Hardest HW Problems | `r Y` | `r Z` | `r Y*Z` | `r paste0(round(((Y*Z)/N)*100,0),"%")` |
-| Lab | Rough Drafts | `r H` | `r I` | `r H*I` | `r paste0(round(((H*I)/N)*100,0),"%")` |
-| Lab | Final Drafts Assignment #1 | `r J` | 1 | `r J` | `r paste0(round((J/N)*100,0),"%")` |
-| Lab | Final Drafts Assignment #2 | `r K` | 1 | `r K` | `r paste0(round((K/N)*100,0),"%")` |
-| Lab | Final Drafts Assignment #3 | `r L` | 1 | `r L` | `r paste0(round((L/N)*100,0),"%")` |
-| Lab | Final Drafts Assignment #4 | `r M` | 1 | `r M` | `r paste0(round((M/N)*100,0),"%")` |
-| Lab | Support Tasks | `r E` | `r G` | `r E*G` | `r paste0(round(((E*G)/N)*100,0),"%")` |
-| Lab | Attendance | `r C` | `r D` | `r C*D` | `r paste0(round(((C*D)/N)*100,0),"%")` |
-|  |  |  | TOTALS: | `r N` | 100% |  
+| Main Class | Exams | `r AA` | `r BB` | `r AA*BB` | `r paste0(round(((AA*BB)/AAA)*100,0),"%")` |
+| Main Class | Perusall Readings | `r II` | `r JJ` | `r II*JJ` | `r paste0(round(((II*JJ)/AAA)*100,0),"%")` |
+| Main Class | Easier HW Problems | `r CC` | `r DD` | `r CC*DD` | `r paste0(round(((CC*DD)/AAA)*100,0),"%")` |
+| Main Class | Harder HW Problems | `r EE` | `r FF` | `r EE*FF` | `r paste0(round(((EE*FF)/AAA)*100,0),"%")` |
+| Main Class | Hardest HW Problems | `r GG` | `r HH` | `r GG*HH` | `r paste0(round(((GG*HH)/AAA)*100,0),"%")` |
+| Lab | Rough Drafts | `r QQ` | `r RR` | `r QQ*RR` | `r paste0(round(((QQ*RR)/AAA)*100,0),"%")` |
+| Lab | Final Draft Assignment 1 | `r SS` | 1 | `r SS` | `r paste0(round((SS/AAA)*100,0),"%")` |
+| Lab | Final Draft Assignment 2 | `r TT` | 1 | `r TT` | `r paste0(round((TT/AAA)*100,0),"%")` |
+| Lab | Final Draft Assignment 3 | `r UU` | 1 | `r UU` | `r paste0(round((UU/AAA)*100,0),"%")` |
+| Lab | Final Draft Assignment 4 | `r VV` | 1 | `r VV` | `r paste0(round((VV/AAA)*100,0),"%")` |
+| Lab | Support Tasks | `r OO` | `r PP` | `r OO*PP` | `r paste0(round(((OO*PP)/AAA)*100,0),"%")` |
+| Lab | Perusall Videos | `r KK` | `r LL` | `r KK*LL` | `r paste0(round(((KK*LL)/AAA)*100,0),"%")` |
+| Lab | Attendance | `r MM` | `r NN` | `r MM*NN` | `r paste0(round(((MM*NN)/AAA)*100,0),"%")` |
+|  |  |  | TOTALS: | `r AAA` | 100% |  
 
 <br/>
 
@@ -810,20 +845,20 @@ The *Total Points in Class* tab is what your grade will be, assuming that you ha
 | Grade 	| A 	| B 	| C 	| D 	| F 	|
 |--------	|:------------:	|:---------------:	|:---------------:	|:---------------:	|:---------------:	|
 | Percents 	| 89.5% $\le y$ 	| 79.5% $\le y \lt$ 89.5% 	| 69.5% $\le y \lt$ 79.5% 	| 59.5% $\le y \lt$ 69.5% 	| $y \lt$ 59.5% 	|
-| Points 	| `r N*.895` $\le y$ 	| `r N*.795` $\le y \lt$ `r N*.895` 	| `r N*.695` $\le y \lt$ `r N*.795` 	| `r N*.595` $\le y \lt$ `r N*.695` 	| $y \lt$ `r N*.595` 	|
+| Points 	| `r round(AAA*.895,2)` $\le y$ 	| `r round(AAA*.795,2)` $\le y \lt$ `r round(AAA*.895,2)` 	| `r round(AAA*.695,2)` $\le y \lt$ `r round(AAA*.795,2)` 	| `r round(AAA*.595,2)` $\le y \lt$ `r round(AAA*.695,2)` 	| $y \lt$ `r round(AAA*.595,2)` 	|
 
 ### Condition 1: The 60% requirement {#GradeThe60PctReq}
 
 <br/>
 
-As noted above in section \@ref(The60PctReq), this is a *W* Course. This means that you must get 60% of the point total for the final drafts in the lab; otherwise, you fail the entire *PSYC 301* course. **Below, $k$ represents any particular student's total percentage/points on the final-draft assignments** (they are collectively worth `r R`  points.)
+As noted above in section \@ref(The60PctReq), this is a *W* Course. This means that you must get 60% of the point total for the final drafts in the lab; otherwise, you fail the entire *PSYC 301* course. **Below, $k$ represents any particular student's total percentage/points on the final-draft assignments** (they are collectively worth `r EEE`  points.)
 
 <br/>
 
 | Grade   | A-D | F |
 |---------|:----:|:----:|
 | Percent |   60% $\le k$  |   $k \lt$ 60%  |
-| Points on Final Drafts ($k$)  |   `r R*.595` $\le k$  |   $k \lt$ `r R*.595`  |
+| Points on Final Drafts ($k$)  |   `r round(EEE*.595,0)` $\le k$  |   $k \lt$ `r round(EEE*.595,0)`  |
 
 ### Condition 2: All 8 drafts submitted {#GradesAll8Drafts}
 
@@ -843,23 +878,25 @@ As mentioned above in *Tasks* (section \@ref(Abs2DraftReq)), you **MUST** turn i
 
 ```{r ImportMainCalendar}
 
-MainCalendar <- read_tsv("tables/ClassCal.tsv", na="") 
+MainCalendar <- read_tsv("tables/ClassCal.tsv", na="NA") 
 
 ```
 
 
 
-```{r diplayMainCalendarHtml, eval=T}
+```{r diplayMainCalendarHtml, results = 'asis', eval=T}
 
 MainCalendar %>%
-kbl(caption = 'Main Class Schedule by Week') %>%
+kbl("html", escape = F, caption = 'Main Class Schedule by Week') %>%
 pack_rows("Unit 1: Background & Descriptive Statistics", 1, 3, background = "#D6D3C4") %>%
 pack_rows("Unit 2: Visualization & Probability", 4, 6, background = "#D6D3C4") %>%
-pack_rows("Unit 3: Inferential statistics you need for your papers", 7, 11, background = "#D6D3C4") %>%
-pack_rows("Unit 4: Other inferential statistics", 12, 15, background = "#D6D3C4") %>%
-pack_rows("Final Exam", 16, 16, background = "#D6D3C4") %>%
+pack_rows("Unit 3: Inferential statistics you need for your papers", 7, 12, background = "#D6D3C4") %>%
+pack_rows("Unit 4: Other inferential statistics", 13, 15, background = "#D6D3C4") %>%
+pack_rows("Final Exam", 16, 17, background = "#D6D3C4") %>%
 row_spec(0:0, bold = T, color = "white", background = "#500000") %>%
-kable_styling(bootstrap_options = "responsive", font_size=11, full_width = F, position = "left")
+kable_styling(bootstrap_options = "responsive", font_size=11, full_width = F, position = "left") %>%
+column_spec(4, width = "2in")  
+
 ```
 
 <!-- Only one of the code chunks above and below can be run. The one that is run should have eval=T as a code-chunk option, whereas the other should have eval=F. Above is for html only. Below is for everything else.-->
@@ -877,9 +914,9 @@ kable_styling(bootstrap_options = "responsive", font_size=11, full_width = F, po
 LabCalendar <- read_tsv("tables/LabCal.tsv")
 ```  
 
-```{r diplayLabCalendarHtml, eval=T}
+```{r diplayLabCalendarHtml, results = 'asis', eval=T}
 LabCalendar %>%
-kbl(caption = 'Lab Schedule by Week') %>%
+kbl("html", escape = F, caption = 'Lab Schedule by Week') %>%
   pack_rows("No labs", 1, 1, background = "#D6D3C4") %>%
   pack_rows("Writing Assignment 1: Introduction", 2, 4, background = "#D6D3C4") %>%
   pack_rows("Writing Assignment 2: Method", 5, 7, background = "#D6D3C4") %>%
