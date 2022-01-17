@@ -338,6 +338,8 @@ $\dagger$ Strikethrough font means that the office location is for documentation
 
 $\ddagger$ [Undergraduate Teaching Scholar](https://liberalarts.tamu.edu/psychology/undergraduate/academics/teaching-scholars-program/)
 
+<br/>
+
 # Details 
 
 ## Class 
@@ -504,12 +506,25 @@ You will consider how data should be collected, presented, and interpreted in an
 
 You will work in teams to design a study and collect data. Almost all research projects in the field of Psychology are collaborative in the modern era.
 
+<br/>
 
 # Tasks {#Tasks}
 
-## Exams in Main Class
+## Tasks in main class
 
-### Overview
+### Readings
+
+The readings for the main class are done through [Perusall](https://support.perusall.com/hc/en-us/categories/360002173133-Students). *Perusall* is a social-reading platform that allows you to see your classmates' comments. These are kept anonymous in this class. 
+
+Each of these `r JJ` readings over the course of the semester is worth `r II` points, or `r II*JJ` points total. This amounts to `r paste0(round(((II*JJ)/AAA)*100,0),"%")` of the total final grade. 
+
+The assignments are graded automatically by *Perusall* using a highly complex algorithm. This algorithm is designed to detect legitimate engagement with the material. In short, as long as you are reading the material deeply, and providing thoughtful comments and replies to comments, *Perusall* will reward you with high scores.
+
+Except for the first reading assignment (which is due on the Friday of the first week), these assignments are always due before class begins on the first instructional day during the week in which the *Perusall* assignment is considered *due*. That is, if you have a *MWF* class, it'll be due before class begins on Monday, and if you have a TTh class, it will be due before class begins on Tuesday.
+
+### Exams
+
+#### Overview
 
 There will be four exams (the 4th being the ***cumulative*** final exam), each worth `r AA` points (summing to `r AA*BB` points, or `r paste0(round(((AA*BB)/AAA)*100,0),"%")` of your total grade). 
 
@@ -528,7 +543,7 @@ A simple calculator will be available on screen. Otherwise, you should be lookin
 
 ---
 
-### Exam re-takes {#ExamReTakes}
+#### Exam re-takes {#ExamReTakes}
 
 The good news is that the exams in this class are now more of a *formative* nature instead of *summative* nature. This means that the tests are more focused on helping you learn rather than assessing your knowledge, per se.
 
@@ -540,7 +555,7 @@ We will accept your highest score of the 1-to-3 attempts on each exam that you t
 
 **However**, there are some ground rules to this process. Details are provided below:  
 
-### Key Exam Dates {#ExamReTakesSummarized}
+#### Key Exam Dates {#ExamReTakesSummarized}
 
 - Exam 1  
   - The attempt window begins on `r Date_Exam1_Start` at `r Time_Exam1_Start`  
@@ -555,23 +570,21 @@ We will accept your highest score of the 1-to-3 attempts on each exam that you t
   - The attempt window begins on `r Date_Final_Start` at `r Time_Final_Start`  
   - The attempt window ends on `r Date_Final_Finish`at `r Time_Final_Finish`  
   
-### Exam guidelines
+#### Exam guidelines
 
 There are more exam guidelines, but since the exams will be online, we have included these guidelines in section \@ref(OnlineExamGuidelines) below. This is because the guidelines are tightly related to how to use the *Respondus Lockdown Browser*.
 
 <br/>
 
-<!-- RESUME EDITING HERE 16Jan2022 at 8:30 pm -->
+### Homework Problems
 
-## Homework Problems in Main Class
+The homework problems assigned in the main class involve calculations. In the table below, you can see when will appear online, and when they are due. These are all Fridays, and the time that they are due is always 11:59 pm. These are also listed on the course schedule (section \@ref(MainClassSchedule)). Note that they can be quite involved, and will probably take you between 1/2 hour and an hour to complete (especially the more difficult ones).
 
-The homework problems$^{\dagger\dagger}$ assigned in the main class involve calculations. In the table below, you can see when will appear online, and when they are due. These are all Fridays, and the time that they are due is always 11:59 pm. These are also listed on the course schedule (section \@ref(MainClassSchedule)). Note that they can be quite involved, and will probably take you between 1/2 hour and an hour to complete (especially the more difficult ones).
+If you are not satisfied with your score on any given attempt, you just make a request in the associated ***Request to re-do HW...*** (a *Google Form* that you fill out). The undergraduate Teaching Scholar for the class will update the assignment so that you can re-take it the following day. But note that on any re-take, you will get a different data set. 
 
-You also have to get ***all*** the answers right. This can be a little frustrating. If you don't get them all right on any given attempt, you just start over (but you will get a different data set every time you re-try the problem). You have an unlimited number of attempts in that time period, except for the fact that you can only attempt them once per day.
+You can re-attempt any given homework up to once per day throughout the time window when that particular homework assignment is available.
 
 There are thirteen of them. See below.
-
-$\dagger\dagger$ Note that these ***used*** to be the short-answer/calculation problems on previous exams. The exams themselves are now purely multiple choice.
 
 ```{r ImportHWProbs}
 HWProbs <- read_tsv("tables/HWProbs.tsv")
@@ -586,7 +599,7 @@ kbl(caption = 'Homework Problems by Date') %>%
 ```  
 
 
-## Extra credit {#ExtraCredit}
+### Extra credit {#ExtraCredit}
 
 There is only one kind of extra credit in this course. In addition to the four reviews you are required to do, you are also allowed (but not required) to do up to 4 extra peer reviews during the peer-review period in *Peerceptiv*. Your extra credit, however, is not reflected in a separate grade column in *Canvas* Rather, it is reflected directly in your grade for the particular assignment in *Peerceptiv*. That is, *Peerceptiv* takes care of your extra-credit points, not us.  
 
@@ -601,6 +614,24 @@ Briefly, what you learn as theory in the main class, you carry out in the lab po
 There are `r BBB` points possible in the lab, the majority of which is carried by the research project (`r CCC`points), and a minority by weekly tasks carried out in lab (`r MM*NN` points).
 
 <br/>
+
+### Attendance 
+
+(`r MM*NN` points [`r MM` points $\times$ `r NN` physical attendances], or `r paste0(round(((MM*NN)/AAA)*100,0),"%")` of the total grade)  
+
+Lab attendance is important for mastering material.
+
+Each lab session will also be available in *Zoom*, and live attendance in *Zoom* is acceptable. Although each lab will be recorded as well for later viewing, just watching the lab asynchronously will ***not*** be considered as having attended.
+
+### Watching how-to videos
+
+There are how-to videos that you need to watch as homework for the lab. Like the reading assignments in the main class, you watch these videos through [Perusall](https://support.perusall.com/hc/en-us/categories/360002173133-Students). Again, *Perusall* is a social-reading (in this case *-watching*) platform that allows you to see your classmates' comments. These are kept anonymous in this class. 
+
+Each of these `r LL` "watchings" over the course of the semester is worth `r KK` points, or `r KK*LL` points total. This amounts to `r paste0(round(((KK*LL)/AAA)*100,0),"%")` of the total final grade. 
+
+Again, each assignment is graded automatically by *Perusall* using a highly complex algorithm. This algorithm is designed to detect legitimate engagement with the material. In short, as long as you are watching the videos carefully, and providing thoughtful comments and replies to comments, *Perusall* will reward you with high scores.
+
+They are always due at 9 am on the day of your lab (irrespective of when your lab actually starts) during the week in which the *Perusall* assignment is considered *due*.
 
 ### Research Project 
 
@@ -619,7 +650,11 @@ There are a total of `r PP` *Support Tasks* Each is worth `r OO` points, or `r O
 
 The support tasks are done individually by student, even though many of them involve shared data sets (i.e., the data set generated by the research group you'll be in). 
 
-For each support task, there will be some extra questions you will need to answer. For support tasks 1-4, your answers will be on a separate form. For support tasks 5-8, you can answer the questions from within the .omv file in *jamovi*. 
+For each support task (with the exception of the first), there will be some extra questions you will need to answer. 
+
+*Support Task #1* is unique, and involves providing examples of what you think might be good research questions and variables for a group project, given what you learned in the first week (in the main class).
+
+For the other support tasks, your answers will be provided through *Gradescope*. In each of these cases, you either provide a link or upload a `.omv` file, and then answer some questions related to what you linked or uploaded. 
 
 At no point should you be tempted to copy your group-mates' answers. You can talk to each other about the answers to the questions, but those answers must be in your own words.
 
@@ -635,23 +670,25 @@ Students will brainstorm on possible topics through a survey provided by the mai
 
 ##### Design (1 task)  
 
-Students will design their study in *Google Forms* in a *Google Drive* folder (specific folders shared out of the head instructor's *Google Drive* account).$^{\dagger\dagger}$ When the study is approved by the TA (due `r Date_ST2`), each group member will get a survey to fill out, which is due at the same time `r Date_ST2`. Based on the answers to the survey, the group members get up to `r OO` points each. 
+Students will design their study in *Google Forms* in a *Google Drive* folder (specific folders shared out of the head instructor's *Google Drive* account).$^{\dagger\dagger}$ When the study is approved by the TA (due `r Date_ST2`), each group member will then fill out a survey, which is due on `r Date_ST2`. Based on the answers to the survey, the group members get up to `r OO` points each. 
 
-$\dagger\dagger$This, and all subsequent tasks, will be associated with documents that are housed in a *Google Drive* folder that has been assigned to you in the head instructor's *Google Drive*. This is the only location considered official for your documents. Do not create any other *Google Drives* or use any other cloud-storage tools for this class.
+$\dagger\dagger$ This will be your group's survey for the semester. It will be housed in a *Google Drive* folder that has been assigned to you in the head instructor's *Google Drive*. This is the only location considered official for your survey. Do not create any other *Google Drives* or use any other cloud-storage tools to put your survey.
 
 <br/>
 
 ##### Data (1 task)  
 
-The groups will collect data. When that data collection is complete and the data have been saved into a *jamovi* file (.omv), uploaded into the same *Google Drive* folder, and approved by the TA, each member of the group will also answer a survey. They will get up to `r OO` points for their answers. This support task is due `r Date_ST3`.
+The groups will collect data. When that data collection is complete and the data have been saved into a *jamovi* file (.omv), uploaded into the same *Google Drive* folder,$^{\dagger\dagger}$ and approved by the TA, each member of the group will also answer a survey. They will get up to `r OO` points for their answers. This support task is due `r Date_ST3`.
+
+$\dagger\dagger$ This will be your group's official data for the semester. It will be housed in a *Google Drive* folder that has been assigned to you in the head instructor's *Google Drive*. This is the only location considered official for your data. Do not create any other *Google Drives* or use any other cloud-storage tools to put this data. That said, the support tasks below (*Outputs*) should be carried out on a copy of the data you download from this *Google Drive* folder.
 
 <br/>
 
 ##### Outputs (5 tasks)  
 
-There are four writing assignments, but the last three require several data-analysis steps. Writing Assignment #2 requires one data analysis, and the last two writing assignments each require two data analyses. This sums to five outputs, and five support tasks, accordingly. 
+There are four writing assignments total, but the last three of these require several data-analysis steps. *Writing Assignment #2* requires one data analysis, and the last two writing assignments each require two data analyses. This sums to five outputs, and five support tasks, accordingly. 
 
-For each of these last five support tasks, several questions will be given to students, and the students can answer each question within their own *jamovi* file itself. Students can get up to `r OO` points based on their answers, and the appropriateness of the respective analysis.
+For each of these last five support tasks, you will upload your analysis to the assignment in *Gradescope*, and then answer the questions that are in the survey (in the same *Gradescope* assignment). Students can get up to `r OO` points based on their answers, and the appropriateness of the respective analysis.
 
 Due dates:  
 
@@ -669,7 +706,7 @@ Due dates:
 
 There are four writing assignments (divided into 4 rough and 4 final drafts) totaling `r DDD` points out of `r AAA`, or `r paste0(round((DDD/AAA)*100,0),"%")` of the class total.  
 
-The four writing assignments correspond roughly to the sections typically found in a published original-research paper in Psychology (*IMRaD* -> *Introduction*, *Method*, *Results*, and *Discussion*) . They must also be formatted according to the [manuscript-formatting guidelines of the American Psychological Association](https://tamu.libguides.com/apa).  More details about this are in the [lab manual](https://patrickabolger.github.io/ElemStatsLabManual/) (Bolger, 2020).
+The four writing assignments correspond roughly to the sections typically found in a published original-research paper in Psychology (*IMRaD* -> *Introduction*, *Method*, *Results*, and *Discussion*) . They should also be formatted according to the [manuscript-formatting guidelines of the American Psychological Association](https://tamu.libguides.com/apa).  More details about this are in the [lab manual](https://patrickabolger.github.io/ElemStatsLabManual/) (Bolger, 2020).
 
 Recall that this is a *W* course. As such, you are required to submit both **rough drafts** (section \@ref(RoughDrafts)) and **final drafts** (section \@ref(FinalDrafts)) of writing assignments. See the respective sections below for more details on these assignment types.
         
@@ -692,19 +729,21 @@ These rough drafts are due on the following dates and times:
 - Assignment #3 (rough draft): `r Date_RoughDraft3`  
 - Assignment #4 (rough draft): `r Date_RoughDraft4`  
 
-Rough drafts must be turned in via [Peerceptiv](https://peerceptiv.zendesk.com/hc/en-us/articles/115004505373-What-is-Peerceptiv-) within *Canvas*. A special link is provided in *Canvas*. Note that you **must** access [Peerceptiv](https://www.peerceptiv.com/) assignments from within *Canvas* using that special link. **Do not** go to the [Peerceptiv](https://www.peerceptiv.com/) website to log in; this leads to problems. 
+Rough drafts must be turned in via [Peerceptiv](https://peerceptiv.zendesk.com/hc/en-us/articles/115004505373-What-is-Peerceptiv-) within *Canvas*. A special link is provided in *Canvas*. Note that you **must** access *Peerceptiv* assignments from within *Canvas* using that special link. **Do not** go to the *Peerceptiv* website to log in; this leads to problems. 
 
-Turning in your rough draft late leads to accruing penalties in two ways:
+Turning in your rough draft ***late*** leads to accruing penalties in two ways:
 
-1. Submitting your rough draft at any time ***between*** 10 am on the day of your lab and 10 am of the subsequent day is a submission during the "grace period". It will result in an automatic 50% off your peer-review grade (or `r round(QQ*.5,1)` our of `r QQ` points). If you upload your draft on time (or at least by the end of the grace period), the grading of the rough draft is done automatically through [Peerceptiv](https://www.peerceptiv.com/) as other students receive your draft and evaluate it.  
+1. Submitting your rough draft at any time ***between*** 9 am on the day of your lab and 9 am of the subsequent day is a submission during the "grace period". It will result in an automatic 50% off your peer-review grade (or `r round(QQ*.5,1)` our of `r QQ` points). If you upload your draft on time (or at least by the end of the grace period), the grading of the rough draft is done automatically through *Peerceptiv* as other students receive your draft and evaluate it.  
 
-2. If you miss the grace period, then you will need to submit your draft to a *Turnitin* assignment that will appear after the grace period (It will be named something like *Late Rough Draft of Writing Assignment #X*). Your TA will then evaluate the paper using the same rubric, and the main instructor will apply the appropriate late penalties. More information is below.  
+2. If you miss the grace period, then *Peerceptiv* will no longer allow you to upload your paper.$^{\dagger\dagger}$ In this case, you will need to submit your draft to an alternative assignment that will be assigned to you after the grace period. This can happen in one of two ways:
 
-- Penalties   
-  - First, your TA will be forced to evaluate your paper personally since you will be locked out from the peer-review process in *Peerceptiv*.$^{\dagger\dagger}$ The main instructor will apply the 50% penalty to the rough draft that [Peerceptiv](https://www.peerceptiv.com/) ***would*** have applied anyway had you uploaded it during the grace period.  
-  - Second, you will receive **additional** cumulative 10% deductions off your **FINAL draft** for every 24-hour period (10 am one day to 10 am the next day) that the **ROUGH draft** is late after the grace period. This penalty accrues on your final draft (and not your rough draft) since (understandably) *Peerceptiv* will not allow you to upload a document **after the grace period**. The 10% penalty on your final draft accrues each day for 10 days after the grace period, at which point you can no longer get any points for the final draft (i.e., the penalties will have accrued to 100%). 
+- *Legitimate excuse*: If you missed the deadline and the grace period because of a ***legitimate*** reason as spelled out in [Student Rule #7](https://student-rules.tamu.edu/rule07/), then you will upload your paper to an assignment labeled *late EXCUSED rough draft of writing assignment #X*. This will be worth 30 points.  
+- *Non-legitimate excuse*: If it is ***not*** legitimate under *Student Rule #7*, then you will upload your paper to an assignment labeled *late UN-excused rough draft of writing assignment #X*. This will be worth 15 points (the penalty applied for a submission within the grace period). But see the bullet point below.  
+- *Incremental penalties for late rough drafts*: You will receive **additional** cumulative 10% deductions off your **FINAL draft** for every 24-hour period (9 am one day to 9 am the next day) that the **ROUGH draft** is late after the grace period. This penalty accrues on your final draft (and not your rough draft) since (understandably) *Peerceptiv* will not allow you to upload a document **after the grace period**. The 10% penalty on your final draft accrues each day for 10 days after the grace period, at which point you can no longer get any points for the final draft (i.e., the penalties will have accrued to 100%). 
 
 $\dagger\dagger$ *Peerceptiv* does this because your paper probably will not get reviewed by a peer at all after the grace period. This is because everyone else will be finishing up with their reviews. 
+
+<br/>
 
 ##### Final Drafts {#FinalDrafts}  
 
@@ -717,17 +756,19 @@ $\dagger\dagger$ *Peerceptiv* does this because your paper probably will not get
 
 <br/>
 
-You will apply the feedback from your rough draft to your final (improved) draft. This is due **by the time your lab meets, usually two weeks after the peer review.** 
+You will apply the feedback from your rough draft to your final (improved) draft. This is due **at 9 am on the day that your lab meets, usually two weeks after the peer review.** 
 
-Specifically, they are due at 10 am on the following dates:  
+Specifically:  
 - Assignment #1 (final draft): `r Date_FinalDraft1`  
 - Assignment #2 (final draft): `r Date_FinalDraft2`  
 - Assignment #3 (final draft): `r Date_FinalDraft3`  
 - Assignment #4 (final draft): `r Date_FinalDraft4`  
 
-Final drafts must be turned in via [Turnitin](https://help.turnitin.com/feedback-studio/blackboard/basic/student/student-category.htm), which will be linked on *Canvas*. Note that there is no need to access anything from the [Turnitin](https://www.turnitin.com/) website itself, except for help files, if you need them. Uploading your files to [Turnitin](https://www.turnitin.com/) directly (outside of *Canvas*) will cause problems.  
+Final drafts will be turned in via a standard assignment in *Canvas*. In the background, it will be checked by [Turnitin](https://www.turnitin.com/). Note that there is no need to access anything from the *Turnitin* website itself, except for help files, if you need them.  
 
-Turning in your final draft late accrues penalties daily. Specifically, 10% will be deducted from the grade of your final version for each 24-hour period the assignment is late after the initial deadline. These penalties will accrue for up to 10 days after the initial deadline, after which is will certainly be worth zero points (a 100% would have accrued). Note however, that if you have penalties carrying over from a rough draft turned in after the grace period (see above), fewer days will elapse before you reach a zero-point maximum on your final draft.
+Turning in your final draft late accrues penalties daily. Specifically, 10% will be deducted from the grade of your final version for each 24-hour period the assignment is late after the initial deadline. These penalties will accrue for up to 10 days after the initial deadline, after which is will certainly be worth zero points (a 100% would have accrued). 
+
+Note however, that if you have penalties carrying over from a rough draft turned in after the grace period (see above), fewer days will elapse before you reach a zero-point maximum on your final draft.
 
 <br/>
 
@@ -755,7 +796,7 @@ This is also covered under *Grades* below (specifically, section \@ref(GradesAll
 
 ##### Substantial revision requirement
 
-Each final draft must reflect substantial changes from the respective rough draft, and these changes must both be commensurate with and accommodate the feedback on that rough draft. If we find that your have turned in a final draft that has not taken the feedback seriously, we reserve the right to return it to you to revise again. In this case, the late-submission clock re-sets itself to the day we notice the failure to make substantial changes. It continues to "tick" daily after that point, however.
+Each final draft must reflect substantial changes from the respective rough draft, and these changes must both be commensurate with and accommodate the feedback on that rough draft. If we find that your have turned in a final draft that has not taken the feedback seriously, your TA reserves the right to return it to you to revise again. In this case, the late-submission clock re-sets itself to the day we notice the failure to make substantial changes. It continues to "tick" daily after that point, however.
 
 These are not covered further in *Grades* below (section \@ref(Grades)) since we will just reject and return the draft to you for further revision in this case.
 
@@ -773,16 +814,17 @@ Typically, the penalty we apply is a zero for the assignment. But penalties can 
 
 Note that reporting to AHSO is mandatory for professors in such cases (if the professor determines that such academic dishonesty has occurred). 
 
-Also, ***do not bother your TAs with issues of plagiarism***. Their job is to identify the *possibility* of plagiarism, and then contact the head professor. They are merely the messenger. Once the issue reaches the professor, it is out of the TA's hands. And the student will only be notified ***after*** the issue has reached the professor. So in sum, do not contact the TA about any kind of academic dishonesty that is suspected on your part; communicate only with the head professor.
+Also, ***do not bother your TAs with issues of  plagiarism***. Their job is to identify the *possibility* of plagiarism, and then contact the head professor. They are merely the messenger. Once the issue reaches the professor, it is out of the TA's hands. And the student will only be notified ***after*** the issue has reached the professor. So in sum, do not contact the TA about any kind of academic dishonesty that is suspected on your part; communicate only with the head professor.
 
 <br/>
 
-#### Helpful hints
+#### Helpful hint
 
 ##### Confirming your uploads in *Peerceptiv* 
 
 For [Peerceptiv](https://www.peerceptiv.com/), make sure that it says “Document Submitted” (after submitting) [take a screenshot if you want proof]; if it doesn’t, **SUBMIT AGAIN**.  
   
+#### Requirement
 
 ##### Cloud-based documents
 
@@ -792,17 +834,17 @@ This is actually to help you, and my guess is that from here on you, you will **
 
 Here's why:
 
-***Versioning***. *Google* will save versions of your documents automatically, meaning that it will save time-stamped snapshots of your document as you work on it. The primary advantage to this (and this is ***HUGE***) is that you can prove to your professors (even in other courses) that a particular draft was completed at a particular time (And in case you were wondering, this problem comes up ***every single semester***, no exceptions so far).
+***Versioning!!***. *Google* will save versions of your documents automatically, meaning that it will save time-stamped snapshots of your document as you work on it. The primary advantage to this (and this is ***HUGE***) is that you can prove to your professors (even in other courses) that a particular draft was completed at a particular time.
 
-*Microsoft 365* also does this (with *Word* documents on that cloud service), but *Google* is a little bit better since you can control the versioning yourself. That is, if you go to *File* > *Version history* > *Name current version*, then you vsn give a name to whatever version you just finished working on (e.g., *WA1_FinalRoughDraftForPeerceptiv*). Then, if you ever happen to mess up the uploading to *Peerceptiv* (which happens every semester for some students, even the best ones), all you need to do is grant your professor *Editor* privileges to the document, and they can see all the versions of the document, the time stamps, and even compare them for changes. 
+And in case you were wondering, this problem comes up ***every single semester***, no exceptions so far.
+
+**EVERY.SINGLE.SEMESTER**
+
+Although *Microsoft 365* also does this (with *Word* documents on that cloud service), *Google* is a little bit better since you can control the versioning yourself. Specifically, within your *Google Doc*, if you go to *File* > *Version history* > *Name current version*, then you can give a name to whatever version you just finished working on (e.g., *WA1_FinalRoughDraftForPeerceptiv*). Then, if you ever happen to mess up the uploading to *Peerceptiv* (which happens every semester for some students, even the best ones), all you need to do is grant your professor *Editor* privileges to the document, and they can see all the versions of the document, the time stamps, and even compare them for changes. 
 
 In *Office 365*, it seems that you need to trust *Microsoft* to create versions for you automatically. This is why we want you to use *Google Docs*.
 
-### Attendance 
-
-(`r MM*NN` points [`r MM` points $\times$ `r NN` physical attendances], or `r paste0(round(((MM*NN)/AAA)*100,0),"%")` of the total grade)  
-
-Lab attendance is important for mastering material.
+<br/>
 
 # Grades {#Grades}
 
@@ -876,6 +918,8 @@ As mentioned above in *Tasks* (section \@ref(Abs2DraftReq)), you **MUST** turn i
 |---------|:----:|:----:|
 | Number of Drafts Turned In ($j$) |   $j =$ 8  |   $j \lt$ 8  |
 
+<br/>
+
 # Schedules 
 
 ## Main Class Schedule {#MainClassSchedule}
@@ -939,6 +983,8 @@ kbl("html", escape = F, caption = 'Lab Schedule by Week') %>%
 
 ```
 
+<br/>
+
 # Materials 
 
 ## OER
@@ -992,6 +1038,7 @@ Oddly, the university does **not** seem to explicitly require a microphone or sp
 - a microphone  
 - speakers (or headphones/earbuds, etc.)  
 - a simple calculator that can do square roots (the one on your smart phone will suffice). But note that during exams, you can use the calculator provided in the [Respondus Lockdown Browser](https://web.respondus.com/he/lockdownbrowser/)  
+<br/>
 
 ## Software 
 
@@ -1084,6 +1131,8 @@ We have set up a ["collection"](https://www.linkedin.com/learning-login/share?ac
 #### The *University Writing Center*  
 
 Because this class emphasizes writing so much, we encourage you to visit the website for the [University Writing Center](http://writingcenter.tamu.edu/Students/Student-Resources) or UWC. The UWC is a great resource for help with any stage of the writing process and offers help both online and in person. Click [here](https://writingcenter.tamu.edu/Hours-Locations) for hours and locations. Click [here](https://youtu.be/stYgyM8trDo) for a 5-minute YouTube overview video, which is also on their [YouTube Channel](https://www.youtube.com/user/tamuwritingcenter). They also have some interactive learning modulues [here](https://writingcenter.tamu.edu/Students/Writing-Speaking-Guides/Interactive-Lessons-List).
+
+<br/>
 
 # Policies  
 
