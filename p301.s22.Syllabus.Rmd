@@ -559,16 +559,16 @@ We will accept your highest score of the 1-to-3 attempts on each exam that you t
 
 - Exam 1  
   - The attempt window begins on `r Date_Exam1_Start` at `r Time_Exam1_Start`  
-  - The attempt window ends on `r Date_Exam1_Finish`at `r Time_Exam1_Finish`  
+  - The attempt window ends on `r Date_Exam1_Finish` at `r Time_Exam1_Finish`  
 - Exam 2
   - The attempt window begins on `r Date_Exam2_Start` at `r Time_Exam2_Start`  
-  - The attempt window ends on `r Date_Exam2_Finish`at `r Time_Exam2_Finish`  
+  - The attempt window ends on `r Date_Exam2_Finish` at `r Time_Exam2_Finish`  
 - Exam 3  
   - The attempt window begins on `r Date_Exam3_Start` at `r Time_Exam3_Start`  
-  - The attempt window ends on `r Date_Exam3_Finish`at `r Time_Exam3_Finish`  
+  - The attempt window ends on `r Date_Exam3_Finish` at `r Time_Exam3_Finish`  
 - Final Exam  
   - The attempt window begins on `r Date_Final_Start` at `r Time_Final_Start`  
-  - The attempt window ends on `r Date_Final_Finish`at `r Time_Final_Finish`  
+  - The attempt window ends on `r Date_Final_Finish` at `r Time_Final_Finish`  
   
 #### Exam guidelines
 
