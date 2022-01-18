@@ -109,7 +109,7 @@ Time_Exam2_Finish <- "11:59 pm"
 ## Exam 3
 Date_Exam3_Start <- "Friday, 8 April"
 Time_Exam3_Start <- "5:00 pm"
-Date_Exam3_Finish <- "Wednedsay, 13 April"
+Date_Exam3_Finish <- "Wednesday, 13 April"
 Time_Exam3_Finish <- "11:59 pm"
 
 ## Final Exam
@@ -449,7 +449,7 @@ Meetings for the all the labs are weekly and face-to-face. If students need to q
 At the end of the main class in *PSYC 301*, the successful student should be able to critically evaluate quantitative information in psychological research, the main sub-skills of which are listed below (success measured on exams and homework problems):  
 
 - Understand how *constructs*, *operationalization*, and *variables* relate to each other in scientific measurement   
-- Understand what *Null Hypothesis Significance Testing* (NHST) is, along with Type I and Type II errors, and the the controversy surrounding the NHST approach  
+- Understand what *Null Hypothesis Significance Testing* (NHST) is, along with Type I and Type II errors, and the controversy surrounding the NHST approach  
 - Understand the various sources of the *replication crisis*, and what future researchers need to do to change this state of affairs  
 - Understand how probability and descriptive statistics work together to make larger inferences, with special emphasis on the following:  
   - Understanding what *p*-values are and are *NOT*  
@@ -658,7 +658,7 @@ For the other support tasks, your answers will be provided through *Gradescope*.
 
 At no point should you be tempted to copy your group-mates' answers. You can talk to each other about the answers to the questions, but those answers must be in your own words.
 
-The are listed in order below.
+The support tasks are listed in order below.
 
 <br/>
 
@@ -716,7 +716,7 @@ Recall that this is a *W* course. As such, you are required to submit both **rou
 
 There are `r RR` rough drafts at `r QQ` points each, which is `r QQ*RR` points total, or `r paste0(round(((QQ*RR)/AAA)*100,0),"%")` of the class total.
 
-Each rough  of the `r RR` rough drafts serves as a draft for your peers to review online. As one of these peer review-**ers**, **you** will review four other papers. You will then use the feedback from others to revise your own final draft. 
+Each of the `r RR` rough drafts serves as a draft for your peers to review online. As one of these peer review-**ers**, you will review four other papers. Subsequently, as a review-**ee**, you will use the feedback from others to revise your own final draft. 
 
 ---
 
@@ -733,7 +733,7 @@ Rough drafts must be turned in via [Peerceptiv](https://peerceptiv.zendesk.com/h
 
 Turning in your rough draft ***late*** leads to accruing penalties in two ways:
 
-1. Submitting your rough draft at any time ***between*** 9 am on the day of your lab and 9 am of the subsequent day is a submission during the "grace period". It will result in an automatic 50% off your peer-review grade (or `r round(QQ*.5,1)` our of `r QQ` points). If you upload your draft on time (or at least by the end of the grace period), the grading of the rough draft is done automatically through *Peerceptiv* as other students receive your draft and evaluate it.  
+1. Submitting your rough draft at any time ***between*** 9 am on the day of your lab and 9 am of the subsequent day is a submission during the "grace period". It will result in an automatic 50% off your peer-review grade (or `r round(QQ*.5,1)` out of `r QQ` points). If you upload your draft on time (or at least by the end of the grace period), the grading of the rough draft is done automatically through *Peerceptiv* as other students receive your draft and evaluate it.  
 
 2. If you miss the grace period, then *Peerceptiv* will no longer allow you to upload your paper.$^{\dagger\dagger}$ In this case, you will need to submit your draft to an alternative assignment that will be assigned to you after the grace period. This can happen in one of two ways:
 
@@ -778,7 +778,7 @@ Note however, that if you have penalties carrying over from a rough draft turned
 
 ##### The 60% requirement {#The60PctReq}
 
-**NOTE THAT IRRESPECTIVE OF YOUR GRADE FOR THE OVERALL CLASS, YOUR SCORE SUMMED ACROSS THE FINAL DRAFTS MUST REACH AT LEAST `r EEE*.595` OUT OF `r EEE` POINTS IN ORDER TO PASS _PSYC 301_ (60% of `r EEE`).** 
+**NOTE THAT IRRESPECTIVE OF YOUR GRADE FOR THE OVERALL CLASS, YOUR SCORE SUMMED ACROSS THE FINAL DRAFTS MUST REACH AT LEAST `r round(EEE*.595,0)` OUT OF `r EEE` POINTS IN ORDER TO PASS _PSYC 301_ (60% of `r EEE`).** 
 
 Note that the points for the rough drafts do not count towards this particular "W" course requirement, but do indeed contribute substantially to your overall grade.
 
@@ -855,19 +855,19 @@ Final grades will be assigned at the end of the semester on the basis of the tot
 
 | Locus | Component | Points per Component | Number of Components | Total Points | % |
 |:----------:|:-------------:|:--------------------:|:--------------------:|:------------:|:----:|
-| Main Class | Exams | `r AA` | `r BB` | `r AA*BB` | `r paste0(round(((AA*BB)/AAA)*100,0),"%")` |
-| Main Class | Perusall Readings | `r II` | `r JJ` | `r II*JJ` | `r paste0(round(((II*JJ)/AAA)*100,0),"%")` |
-| Main Class | Easier HW Problems | `r CC` | `r DD` | `r CC*DD` | `r paste0(round(((CC*DD)/AAA)*100,0),"%")` |
-| Main Class | Harder HW Problems | `r EE` | `r FF` | `r EE*FF` | `r paste0(round(((EE*FF)/AAA)*100,0),"%")` |
-| Main Class | Hardest HW Problems | `r GG` | `r HH` | `r GG*HH` | `r paste0(round(((GG*HH)/AAA)*100,0),"%")` |
-| Lab | Rough Drafts | `r QQ` | `r RR` | `r QQ*RR` | `r paste0(round(((QQ*RR)/AAA)*100,0),"%")` |
-| Lab | Final Draft Assignment 1 | `r SS` | 1 | `r SS` | `r paste0(round((SS/AAA)*100,0),"%")` |
-| Lab | Final Draft Assignment 2 | `r TT` | 1 | `r TT` | `r paste0(round((TT/AAA)*100,0),"%")` |
-| Lab | Final Draft Assignment 3 | `r UU` | 1 | `r UU` | `r paste0(round((UU/AAA)*100,0),"%")` |
-| Lab | Final Draft Assignment 4 | `r VV` | 1 | `r VV` | `r paste0(round((VV/AAA)*100,0),"%")` |
-| Lab | Support Tasks | `r OO` | `r PP` | `r OO*PP` | `r paste0(round(((OO*PP)/AAA)*100,0),"%")` |
-| Lab | Perusall Videos | `r KK` | `r LL` | `r KK*LL` | `r paste0(round(((KK*LL)/AAA)*100,0),"%")` |
-| Lab | Attendance | `r MM` | `r NN` | `r MM*NN` | `r paste0(round(((MM*NN)/AAA)*100,0),"%")` |
+| Main Class | Exams | `r AA` | `r BB` | `r AA*BB` | `r paste0(round(((AA*BB)/AAA)*100,1),"%")` |
+| Main Class | Perusall Readings | `r II` | `r JJ` | `r II*JJ` | `r paste0(round(((II*JJ)/AAA)*100,1),"%")` |
+| Main Class | Easier HW Problems | `r CC` | `r DD` | `r CC*DD` | `r paste0(round(((CC*DD)/AAA)*100,1),"%")` |
+| Main Class | Harder HW Problems | `r EE` | `r FF` | `r EE*FF` | `r paste0(round(((EE*FF)/AAA)*100,1),"%")` |
+| Main Class | Hardest HW Problems | `r GG` | `r HH` | `r GG*HH` | `r paste0(round(((GG*HH)/AAA)*100,1),"%")` |
+| Lab | Rough Drafts | `r QQ` | `r RR` | `r QQ*RR` | `r paste0(round(((QQ*RR)/AAA)*100,1),"%")` |
+| Lab | Final Draft Assignment 1 | `r SS` | 1 | `r SS` | `r paste0(round((SS/AAA)*100,1),"%")` |
+| Lab | Final Draft Assignment 2 | `r TT` | 1 | `r TT` | `r paste0(round((TT/AAA)*100,1),"%")` |
+| Lab | Final Draft Assignment 3 | `r UU` | 1 | `r UU` | `r paste0(round((UU/AAA)*100,1),"%")` |
+| Lab | Final Draft Assignment 4 | `r VV` | 1 | `r VV` | `r paste0(round((VV/AAA)*100,1),"%")` |
+| Lab | Support Tasks | `r OO` | `r PP` | `r OO*PP` | `r paste0(round(((OO*PP)/AAA)*100,1),"%")` |
+| Lab | Perusall Videos | `r KK` | `r LL` | `r KK*LL` | `r paste0(round(((KK*LL)/AAA)*100,1),"%")` |
+| Lab | Attendance | `r MM` | `r NN` | `r MM*NN` | `r paste0(round(((MM*NN)/AAA)*100,1),"%")` |
 |  |  |  | TOTALS: | `r AAA` | 100% |  
 
 <br/>
@@ -972,7 +972,7 @@ kbl("html", escape = F, caption = 'Lab Schedule by Week') %>%
   pack_rows("Writing Assignment 4: Study 2 / General Discussion", 11, 13, background = "#D6D3C4") %>%
   kable_styling(bootstrap_options = "responsive", font_size = 11, full_width = F, position = "left") %>%
   row_spec(0:0, bold = T, color = "white", background = "#500000") %>%
-  footnote(general = c("NF19 = Navarro & Foxcroft (2019) - your main textbook  ", "Bolger20 = Bolger (2020) - your lab manual  ", "All times refer to the day of your particular lab, unless otherwise specified  ", "However, note that all uploads to *Peerceptive* are due at 10:00 AM on the day of your lab, no matter what time your lab actually meets  "))
+  footnote(general = c("NF19 = Navarro & Foxcroft (2019) - your main textbook  ", "Bolger20 = Bolger (2020) - your lab manual  ", "All times refer to the day of your particular lab, unless otherwise specified  ", "However, note that all uploads to *Peerceptiv* are due at 9:00 AM on the day of your lab, no matter what time your lab actually meets  "))
 ```  
 
 <!-- Only one of the code chunks above and below can be run. The one that is run should have eval=T as a code-chunk option, whereas the other should have eval=F. Above is for html only. Below is for everything else.-->
@@ -1021,23 +1021,19 @@ So although these materials are free, they do still exist, and you need to get t
 
 ### Main Class
 
-The university now requires you to possess personally the following:  
+The university now requires you to possess the following:  
 
 - a computer with access to the internet ([click here to see A&M's computer requirements](https://it.tamu.edu/services/academics-and-research/teaching-and-learning-tools/computer-requirements/))  
 
-- a webcam  
+>Oddly, the university does **not** seem to explicitly require a microphone or speakers. I have to assume it must be implicit with the "integrated webcam." 
 
-Technically, no other hardware is required for the main class. 
-
-<br/>
-
-### Lab
-
-Oddly, the university does **not** seem to explicitly require a microphone or speakers. I have to assume it must be implicit with the "integrated webcam." 
+Anyway, I'll include them below
 
 - a microphone  
 - speakers (or headphones/earbuds, etc.)  
-- a simple calculator that can do square roots (the one on your smart phone will suffice). But note that during exams, you can use the calculator provided in the [Respondus Lockdown Browser](https://web.respondus.com/he/lockdownbrowser/)  
+
+Technically, no other hardware is required for the main class. 
+
 <br/>
 
 ## Software 
