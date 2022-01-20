@@ -354,7 +354,6 @@ pandoc.table(PeopleInfo, style = "multiline", split.table = Inf, missing = "", c
 >Statistics is the art of stating in precise terms that which one does not know. 
 -- William Kruskal
 
-<br/>
 
 >Statistics is a body of methods for making wise decisions in the face of uncertainty -- Wallis & Roberts (1956)
 
