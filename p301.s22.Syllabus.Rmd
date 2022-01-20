@@ -305,6 +305,10 @@ PeopleInfo2 %>%
 
 ```
 
+$\dagger$ Strikethrough font means that the office location is for documentation purposes only. Student hours are online only.
+
+$\ddagger$ [Undergraduate Teaching Scholar](https://liberalarts.tamu.edu/psychology/undergraduate/academics/teaching-scholars-program/)
+
 <br/>
 
 ```{r PeopleInfo3Html, eval=T}
@@ -325,6 +329,10 @@ PeopleInfo3 %>%
 
 ```
 
+$\dagger$ Strikethrough font means that the office location is for documentation purposes only. Student hours are online only.
+
+$\ddagger$ [Undergraduate Teaching Scholar](https://liberalarts.tamu.edu/psychology/undergraduate/academics/teaching-scholars-program/)
+
 <!-- Only one of the code chunks above and below can be run. The one that is run should have eval=T as a code-chunk option, whereas the other should have eval=F. Above is for html only. Below is for everything else.-->
 
 ```{r PeopleInfoNotHtml, results = 'asis', eval=F}
@@ -334,9 +342,6 @@ pandoc.table(PeopleInfo, style = "multiline", split.table = Inf, missing = "", c
 
 ```
 
-$\dagger$ Strikethrough font means that the office location is for documentation purposes only. Student hours are online only.
-
-$\ddagger$ [Undergraduate Teaching Scholar](https://liberalarts.tamu.edu/psychology/undergraduate/academics/teaching-scholars-program/)
 
 <br/>
 
