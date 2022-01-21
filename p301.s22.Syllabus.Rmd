@@ -351,11 +351,10 @@ pandoc.table(PeopleInfo, style = "multiline", split.table = Inf, missing = "", c
 
 ### Description
 
->Statistics is the art of stating in precise terms that which one does not know. 
--- William Kruskal
+>Statistics is the art of stating in precise terms that which one does not know. -- William Kruskal
 
 
->Statistics is a body of methods for making wise decisions in the face of uncertainty -- Wallis & Roberts (1956)
+>Statistics is a body of methods for making wise decisions in the face of uncertainty. -- Wallis & Roberts (1956)
 
 Statistics is the math of estimation, prediction, and uncertainty. The course will teach you to use a broad set of statistical methods to analyze data and interpret hypothesis tests. We will emphasize statistical reasoning and its interpretation rather than memorization of formulas. You will be trained to be critical consumers of research findings described in both the scientific literature and popular media. You will ***not*** have to perform calculations during exams; they are done as homework assignments. But these require nothing more than basic algebra. The emphasis of this class is on understanding the *logic* of the statistical methods. **If you can use a simple four-function calculator, you can do statistics**. 
 
@@ -375,7 +374,7 @@ Meetings for the main class are remote and synchronous.
 
 This course is a [university designated “W” course](http://writingcenter.tamu.edu/Students/W-C-Courses). Although statistics may not seem like the most obvious class to be writing-intensive, effective communication about statistical analyses and the interpretation of results is a crucial part of psychological science. Writing well is a set of skills that can be developed with deliberate practice. You will have the chance to develop such skills in this course.
 
-Accordingly, since it is a 4-unit "W" course, at least 25% of your grade must be based on writing. In this class, there are both rough and final drafts. Together, they comprise `r paste0(round((DDD/AAA)*100,0),"%")` of your total grade, or ***`r DDD` points out of `r AAA`***. 
+Accordingly, since it is a 4-unit *W* course, at least 25% of your grade must be based on writing. In this class, there are both rough and final drafts. Together, they comprise `r paste0(round((DDD/AAA)*100,0),"%")` of your total grade, or ***`r DDD` points out of `r AAA`***. 
 
 Additionally, as per the rules of the [Department of Psychological and Brain Sciences](https://liberalarts.tamu.edu/psychology/), you must pass the writing portion of the course with at least 60% of the points on the writing assignments (59.5% in this class rounds up to 60%). For this class, this means that **your total summed score across all FINAL drafts of papers must reach at least `r round(EEE*.595,0)` out of `r EEE` points.** 
 
@@ -784,7 +783,7 @@ Note however, that if you have penalties carrying over from a rough draft turned
 
 **NOTE THAT IRRESPECTIVE OF YOUR GRADE FOR THE OVERALL CLASS, YOUR SCORE SUMMED ACROSS THE FINAL DRAFTS MUST REACH AT LEAST `r round(EEE*.595,0)` OUT OF `r EEE` POINTS IN ORDER TO PASS _PSYC 301_ (60% of `r EEE`).** 
 
-Note that the points for the rough drafts do not count towards this particular "W" course requirement, but do indeed contribute substantially to your overall grade.
+Note that the points for the rough drafts do not count towards this particular *W* course requirement, but do indeed contribute substantially to your overall grade.
 
 This is also covered under *Grades* below (specifically, section \@ref(GradeThe60PctReq)).
 
