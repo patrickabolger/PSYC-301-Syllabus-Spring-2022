@@ -261,7 +261,7 @@ CourseInfo <- read_tsv("tables/CourseInfo.tsv", na="NA")
 
 CourseInfo %>%
   select(3:7) %>%
-  kbl(caption = "Section Information for PSYC 301") %>%
+  kbl(caption = "Main-Class Information for PSYC 301") %>%
   pack_rows("Dr. Patrick Bolger", 1, 1, background = "#D6D3C4") %>%
   pack_rows("Dr. Yumiko Mochinushi", 2, 2, background = "#D6D3C4") %>%
   row_spec(0:0, bold = T, color = "white", background = "#500000") %>%
@@ -272,12 +272,40 @@ CourseInfo %>%
 
 <!-- Only one of the code chunks above and below can be run. The one that is run should have eval=T as a code-chunk option, whereas the other should have eval=F. Above is for html only. Below is for everything else.-->
 
-
 ```{r CourseInfoNotHtml, results = 'asis', eval=F}
 
  pandoc.table(CourseInfo, style = "multiline", split.table = Inf, missing = "")
 
 ```
+
+<br/>
+
+```{r Import_LabInfo}
+
+LabInfo <- read_tsv("tables/LabInfo.tsv", na="NA") 
+
+```
+
+```{r LabInfoHtml, eval=T}
+
+LabInfo %>%
+  kbl(caption = "Section Information for PSYC 301") %>%
+  pack_rows("Sections 902-905, Tuesdays in Milner 202", 1, 4, background = "#D6D3C4") %>%
+  pack_rows("Sections 912-915, Wednesdays in Milner 202", 5, 8, background = "#D6D3C4") %>%
+  row_spec(0:0, bold = T, color = "white", background = "#500000") %>%
+  kable_styling(bootstrap_options = "responsive", font_size=14, full_width = F, position = "left")
+
+```
+
+<!-- Only one of the code chunks above and below can be run. The one that is run should have eval=T as a code-chunk option, whereas the other should have eval=F. Above is for html only. Below is for everything else.-->
+
+```{r LabInfoNotHtml, results = 'asis', eval=F}
+
+ pandoc.table(LabInfo, style = "multiline", split.table = Inf, missing = "")
+
+```
+
+<br/>
 
 ## People
 
