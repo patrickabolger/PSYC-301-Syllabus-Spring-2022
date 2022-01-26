@@ -248,7 +248,7 @@ Date_FinalDraft4 <- "Tuesday, 3 May by 11:59 pm"
 
 <!-- Course Info -->
 
-## Sections
+## Main Class meetings
 
 ```{r Import_CourseInfo}
 
@@ -280,6 +280,8 @@ CourseInfo %>%
 
 <br/>
 
+## Lab Meetings
+
 ```{r Import_LabInfo}
 
 LabInfo <- read_tsv("tables/LabInfo.tsv", na="NA") 
@@ -307,7 +309,7 @@ LabInfo %>%
 
 <br/>
 
-## People
+## Contact Information
 
 ```{r Import_PeopleInfo}
 
