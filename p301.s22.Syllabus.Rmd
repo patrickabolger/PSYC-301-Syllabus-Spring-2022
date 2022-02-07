@@ -95,9 +95,9 @@ EEE <- sum(                                                                     
 ## 
 ## THESE NEEED TO CHANGE, I THINK
 ## 
-Date_Exam1_Start <- "Friday, 04 February"
+Date_Exam1_Start <- "Friday, 11 February"
 Time_Exam1_Start <- "5:00 pm"
-Date_Exam1_Finish <- "Wednesday, 09 February"
+Date_Exam1_Finish <- "Wednesday, 16 February"
 Time_Exam1_Finish <- "11:59 pm"
 
 ## Exam 2
@@ -1097,13 +1097,7 @@ Watch this [brief video](https://www.respondus.com/products/lockdown-browser/stu
 - If this is tried, an error message will indicate that the test requires the use of LockDown Browser  
   - Simply start *LockDown Browser* and navigate back to the exam to continue  
 
-##### Honorlock
-
-Honorlock works for Google Chrome only and is simply an [extension to the browser](https://static.honorlock.com/install/extension). There is a test for it when you try to install the extension. You should have a sufficiently fast and reliable internet connection.
-
-You will definitely ***need*** to use Honorlock if you only have access to a Google Chromebook laptop.
-
-Here is a [brief tutorial](https://youtu.be/VjY7cIVaTAw) for students on how to use Honorlock.
+<br/>
 
 #### Online exam guidelines {#OnlineExamGuidelines}
 
