@@ -101,9 +101,9 @@ Date_Exam1_Finish <- "Wednesday, 16 February"
 Time_Exam1_Finish <- "11:59 pm"
 
 ## Exam 2
-Date_Exam2_Start <- "Friday, 25 February"
+Date_Exam2_Start <- "Friday, 4 March"
 Time_Exam2_Start <- "5:00 pm"
-Date_Exam2_Finish <- "Wednesday, 2 March"
+Date_Exam2_Finish <- "Wednesday, 9 March"
 Time_Exam2_Finish <- "11:59 pm"
 
 ## Exam 3
