@@ -236,9 +236,17 @@ Date_RoughDraft4 <- "by 9:00 am, the day of your lab, 19 or 20 April"
 
 #### CHANGE THESE DATES TO PUT TIME BETWEEN ROUGH DRAFT###
 # Final Drafts
-Date_FinalDraft1 <- "by 9:00 am, the day of your lab, 22 or 23 February"
-Date_FinalDraft2 <- "by 9:00 am, the day of your lab, 22 or 23 March"
-Date_FinalDraft3 <- "by 9:00 am, the day of your lab, 12 or 13 April"
+
+# OLD
+##Date_FinalDraft1 <- "by 9:00 am, the day of your lab, 22 or 23 February"
+##Date_FinalDraft2 <- "by 9:00 am, the day of your lab, 22 or 23 March"
+##Date_FinalDraft3 <- "by 9:00 am, the day of your lab, 12 or 13 April"
+##Date_FinalDraft4 <- "Tuesday, 3 May by 11:59 pm"
+
+#NEW
+Date_FinalDraft1 <- "by 11:59 pm, Friday, 25 February"
+Date_FinalDraft2 <- "by 11:59 pm, Friday, 25 March"
+Date_FinalDraft3 <- "by 11:59 pm, Friday 15 April"
 Date_FinalDraft4 <- "Tuesday, 3 May by 11:59 pm"
 
 ```
